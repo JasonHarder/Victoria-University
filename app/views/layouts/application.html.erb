@@ -3,7 +3,6 @@
   <head>
     <title>Victoria</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -32,6 +31,8 @@
 <% end %>
 <%-# DO NOT TOUCH CODE RIGHT ABOVE THIS COMMENT IT IS CRITICAL FOR  DEVISE LOGIN -%>
 
+
+<%# can remove below code before yield (which is essential) Yield allows for layouts to render properly %>
 <div class="jumbotron text-center">
   <h1>My First Bootstrap Page</h1>
   <p>Resize this responsive page to see the effect!</p> 
@@ -56,9 +57,6 @@
     </div>
   </div>
 </div>
-
-</body>
-</html>
 
 
 <%= yield %>

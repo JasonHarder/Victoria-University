@@ -16,3 +16,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+<%= csrf_meta_tags %>
+<%= stylesheet_link_tag    'application', media: 'all' %>
+<%= javascript_include_tag 'application' %>
