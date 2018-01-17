@@ -1,0 +1,19 @@
+current directory: /home/jason/bitmaker/victoria/vendor/bundle/gems/byebug-9.1.0/ext/byebug
+/usr/bin/ruby2.3 -r ./siteconf20180116-21863-owp9j0.rb extconf.rb
+creating Makefile
+
+current directory: /home/jason/bitmaker/victoria/vendor/bundle/gems/byebug-9.1.0/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/jason/bitmaker/victoria/vendor/bundle/gems/byebug-9.1.0/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/jason/bitmaker/victoria/vendor/bundle/gems/byebug-9.1.0/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20180116-21863-1rthmw8/byebug

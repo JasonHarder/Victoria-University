@@ -1,0 +1,19 @@
+current directory: /home/jason/bitmaker/victoria-shared/vendor/bundle/gems/bcrypt-3.1.11/ext/mri
+/usr/bin/ruby2.3 -r ./siteconf20180116-1950-1esowxd.rb extconf.rb
+creating Makefile
+
+current directory: /home/jason/bitmaker/victoria-shared/vendor/bundle/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" clean
+
+current directory: /home/jason/bitmaker/victoria-shared/vendor/bundle/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.so
+
+current directory: /home/jason/bitmaker/victoria-shared/vendor/bundle/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20180116-1950-ht9boo

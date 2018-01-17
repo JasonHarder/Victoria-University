@@ -1,0 +1,15 @@
+current directory: /home/jason/bitmaker/victoria/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+/usr/bin/ruby2.3 -r ./siteconf20180116-21863-7qgyu0.rb extconf.rb
+creating Makefile
+
+current directory: /home/jason/bitmaker/victoria/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /home/jason/bitmaker/victoria/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.so
+
+current directory: /home/jason/bitmaker/victoria/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20180116-21863-1eo7y9g/bindex
