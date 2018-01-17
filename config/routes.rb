@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  get 'conversations/create'
+
+  get 'conversations/add_to_conversations'
+
+  get 'conversations/conversated?'
+
   devise_for :users
   resources :news 
   resources :users
