@@ -12,3 +12,5 @@ class Conversation < ApplicationRecord
 end
 
 ##ADD INDEX COMMAND MAY NEED TO BE EXECUTED IN TERMINAL - DOUBLE CHECK.
+# Adding the between scope means being able to return a conversation between 2 requested users
+# we add a get method to get a conversation between 2 users and if present , will return it if there is not any it would create one.
