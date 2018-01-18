@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   
-  get 'conversations/create'
+  get 'conversations/create' => 'conversations#create'
 
-  get 'conversations/add_to_conversations'
+  get 'conversations/add_to_conversations' => 'conversations#add_to_conversations'
 
-  get 'conversations/conversated?'
+  get 'conversations/conversated?' => 'conversations#conversated?'
 
   devise_for :users
   resources :news 
@@ -24,27 +24,13 @@ Rails.application.routes.draw do
   
   get 'admission/index' => 'admission#index'
 
-  get 'academic/index' 
+  get 'academic/index' => 'academic#index'
 
-  get 'news/index'
+  get 'schools/index' => 'schools#index'
 
-  get 'news/show'
+  get 'about/index' => 'about#index'
 
-  get 'news/new'
-
-  get 'news/create'
-
-  get 'news/edit'
-
-  get 'news/update'
-
-  get 'news/destroy'
-
-  get 'schools/index'
-
-  get 'about/index'
-
-  get 'home/index'
+  get 'home/index' => 'home#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
  end 

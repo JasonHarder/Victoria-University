@@ -1,0 +1,97 @@
+current directory: /home/jason/bitmaker/victoria-university-tester(personal)/vendor/bundle/gems/nokogiri-1.8.1/ext/nokogiri
+/home/jason/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20180118-22138-qkd1i2.rb extconf.rb
+checking if the C compiler accepts ... yes
+Building nokogiri using packaged libraries.
+Using mini_portile version 2.3.0
+Ignoring bcrypt-3.1.11 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.11
+Ignoring bindex-0.5.0 because its extensions are not built. Try: gem pristine bindex --version 0.5.0
+Ignoring byebug-9.1.0 because its extensions are not built. Try: gem pristine byebug --version 9.1.0
+Ignoring ffi-1.9.18 because its extensions are not built. Try: gem pristine ffi --version 1.9.18
+Ignoring nio4r-2.2.0 because its extensions are not built. Try: gem pristine nio4r --version 2.2.0
+Ignoring puma-3.11.0 because its extensions are not built. Try: gem pristine puma --version 3.11.0
+Ignoring sqlite3-1.3.13 because its extensions are not built. Try: gem pristine sqlite3 --version 1.3.13
+Ignoring websocket-driver-0.6.5 because its extensions are not built. Try: gem pristine websocket-driver --version 0.6.5
+checking for gzdopen() in -lz... yes
+checking for iconv... yes
+************************************************************************
+IMPORTANT NOTICE:
+
+Building Nokogiri with a packaged version of libxml2-2.9.5.
+
+Team Nokogiri will keep on doing their best to provide security
+updates in a timely manner, but if this is a concern for you and want
+to use the system library instead; abort this installation process and
+reinstall nokogiri as follows:
+
+    gem install nokogiri -- --use-system-libraries
+        [--with-xml2-config=/path/to/xml2-config]
+        [--with-xslt-config=/path/to/xslt-config]
+
+If you are using Bundler, tell it to use the option:
+
+    bundle config build.nokogiri --use-system-libraries
+    bundle install
+
+Note, however, that nokogiri is not fully compatible with arbitrary
+versions of libxml2 provided by OS/package vendors.
+************************************************************************
+Extracting libxml2-2.9.5.tar.gz into tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.5... OK
+Running 'configure' for libxml2 2.9.5... ERROR, review '/home/jason/bitmaker/victoria-university-tester(personal)/vendor/bundle/gems/nokogiri-1.8.1/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.5/configure.log' to see what happened. Last lines are:
+========================================================================
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+./configure: eval: line 2857: syntax error near unexpected token `('
+./configure: eval: line 2857: `${SHELL} /home/jason/bitmaker/victoria-university-tester(personal)/vendor/bundle/gems/nokogiri-1.8.1/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.5/libxml2-2.9.5/missing --is-lightweight'
+========================================================================
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/home/jason/.rbenv/versions/2.5.0/bin/$(RUBY_BASE_NAME)
+	--help
+	--clean
+	--use-system-libraries
+	--enable-static
+	--disable-static
+	--with-zlib-dir
+	--without-zlib-dir
+	--with-zlib-include
+	--without-zlib-include=${zlib-dir}/include
+	--with-zlib-lib
+	--without-zlib-lib=${zlib-dir}/lib
+	--enable-cross-build
+	--disable-cross-build
+/home/jason/bitmaker/victoria-university-tester(personal)/vendor/bundle/gems/mini_portile2-2.3.0/lib/mini_portile2/mini_portile.rb:402:in `block in execute': Failed to complete configure task (RuntimeError)
+	from /home/jason/bitmaker/victoria-university-tester(personal)/vendor/bundle/gems/mini_portile2-2.3.0/lib/mini_portile2/mini_portile.rb:373:in `chdir'
+	from /home/jason/bitmaker/victoria-university-tester(personal)/vendor/bundle/gems/mini_portile2-2.3.0/lib/mini_portile2/mini_portile.rb:373:in `execute'
+	from /home/jason/bitmaker/victoria-university-tester(personal)/vendor/bundle/gems/mini_portile2-2.3.0/lib/mini_portile2/mini_portile.rb:110:in `configure'
+	from /home/jason/bitmaker/victoria-university-tester(personal)/vendor/bundle/gems/mini_portile2-2.3.0/lib/mini_portile2/mini_portile.rb:153:in `cook'
+	from extconf.rb:365:in `block (2 levels) in process_recipe'
+	from extconf.rb:257:in `block in chdir_for_build'
+	from extconf.rb:256:in `chdir'
+	from extconf.rb:256:in `chdir_for_build'
+	from extconf.rb:364:in `block in process_recipe'
+	from extconf.rb:262:in `tap'
+	from extconf.rb:262:in `process_recipe'
+	from extconf.rb:548:in `<main>'
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /home/jason/bitmaker/victoria-university-tester(personal)/vendor/bundle/extensions/x86_64-linux/2.5.0-static/nokogiri-1.8.1/mkmf.log
+
+extconf failed, exit code 1
