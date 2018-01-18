@@ -2,7 +2,7 @@
     <div class='col-md-9'>
       <ul id="conversations-list">
         <% @conversations.each do |conversation| %> 
-          <%= render 'conversations/conversation', conversation: conversation, user: current_user %>
+          <%= link_to "x", close_conversation_path(conversation), class: "btn btn-default btn-xs pull-right", remote: true, method: :post %>
       <% end %>
     </ul>
   </div>

@@ -1,36 +1,16 @@
+
 Rails.application.routes.draw do
-  
-  get 'conversations/create' => 'conversations#create'
-
-  get 'conversations/add_to_conversations' => 'conversations#add_to_conversations'
-
-  get 'conversations/conversated?' => 'conversations#conversated?'
+  root 'home#index'
 
   devise_for :users
-  resources :news 
-  resources :users
 
-  root to: "home#index"
-  
-  resources :conversations, only: [:create]
+  resources :conversations, only: [:create] do
+    member do
+      post :close
+    end
 
-  get '/' => 'home#index'
-  
-  get 'payment/index' => 'payment#index'
+    resources :messages, only: [:create]
+  end
+end
 
-  get 'contact/index' => 'contact#index'
-
-  get 'campus/index' => 'campus#index'
-  
-  get 'admission/index' => 'admission#index'
-
-  get 'academic/index' => 'academic#index'
-
-  get 'schools/index' => 'schools#index'
-
-  get 'about/index' => 'about#index'
-
-  get 'home/index' => 'home#index'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
- end 
+##redo routes or add routes from (shared) GH
