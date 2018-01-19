@@ -35,6 +35,30 @@
 <% end %>
 <%-# DO NOT TOUCH CODE RIGHT ABOVE THIS COMMENT IT IS CRITICAL FOR  DEVISE LOGIN -%>
 
+<div class="row">
+  <div class="col-md-9">
+    <ul id="conversations-list">
+      <% @conversations.each do |conversation| %>
+        <%= render 'conversations/conversation', conversation: conversation, user: current_user %>
+      <% end %>
+    </ul>
+  </div>
+ 
+  <div class="col-md-3">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">User list</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <% @users.each do |user| %>
+           <li><%= link_to user.email, conversations_path(user_id: user), remote: true, method: :post %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%# do not remove yield this is where the layout switches to the page it is in.%>
 <%= yield %>
