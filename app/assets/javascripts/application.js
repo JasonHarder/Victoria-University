@@ -10,19 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 
-//= require turbolinks
 //= require jquery
+//= require turbolinks
 //= require jquery_ujs
 //= require rails-ujs
-//= require_tree .
-
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
-<%= csrf_meta_tags %>
-<%= stylesheet_link_tag    'application', media: 'all' %>
-<%= javascript_include_tag 'application' %>
-
+//= require_tree.
 
 (function() {
   $(document).on('click', '.toggle-window', function(e) {

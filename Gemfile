@@ -48,6 +48,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -55,11 +56,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #devise is great for advanced authentication
 gem 'devise'
 #botostrap and autoprefixer for great visual style and code.
-gem 'bootstrap', '~> 4.0.0.beta3'
-gem 'autoprefixer-rails'
-gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
-gem 'sprockets-rails', :require => 'sprockets/railtie'
-# gem for bootstrap web styles.
+gem 'bootstrap-sass', '~> 3.3.6'
 
+gem 'autoprefixer-rails'
+# gem for bootstrap web styles.
+gem 'jquery-rails'
 #gem for payment -> may not need depends on whats needed for api access
 gem 'stripe'

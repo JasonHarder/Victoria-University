@@ -1,6 +1,3 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-
 <div class="row">
   <div class="col-md-9">
     <ul id="conversations-list">
@@ -18,7 +15,7 @@
       <div class="panel-body">
         <ul>
           <% @users.each do |user| %>
-            <li><%= link_to user.email, conversations_path(user_id: user), remote: true, method: :post%> </li>
+           <li><%= link_to user.email, conversations_path(user_id: user), remote: true, method: :post %></li>
           <% end %>
         </ul>
       </div>

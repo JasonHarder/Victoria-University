@@ -1,4 +1,3 @@
-
 Rails.application.routes.draw do
   root 'home#index'
 
@@ -8,9 +7,9 @@ Rails.application.routes.draw do
     member do
       post :close
     end
-
+    
     resources :messages, only: [:create]
   end
-end
 
-##redo routes or add routes from (shared) GH
+
+end

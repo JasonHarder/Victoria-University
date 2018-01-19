@@ -1,12 +1,6 @@
-//= require turbolinks
-//= require rails-ujs
-//= require jquery
-//= require bootstrap-sprockets
-//= require jquery-ujs
-//= require_tree
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
 ul {
     padding-left: 0px;
     list-style: none;
