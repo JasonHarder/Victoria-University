@@ -2,6 +2,8 @@ class HomeController < ApplicationController
   def index
     session[:conversations] ||= []
     
+    # write something like if conversation id exists use code below , if not create a new conversation.
+
     @users = User.all.where.not(id: current_user)
     @conversations = Conversation.includes(:recipient, :messages)
                                           .find(session[:conversations])
