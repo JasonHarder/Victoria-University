@@ -13,29 +13,22 @@
 
   <body>
 
+<%# Ruby code connected to successful login giving them the ability to see conversation stuff  if they are logged in. may need to change placement later for better look.%>
+
 <p class="navbar-text pull-right">
+
 <% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+
 <% else %>
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
-</p>
-<body>
 
-
-<%# RUBY CODE DO NOT TOUCH - NEEDED FOR DEVISE%>
-<%if notice %>
-  <p class= "alert alert_success"><%=notice %> </p>
-<% end %>
-<% if alert %>
-<p class ="alert alert-danger"> <%=alert %> </p>
-<% end %>
-<%-# DO NOT TOUCH CODE RIGHT ABOVE THIS COMMENT IT IS CRITICAL FOR  DEVISE LOGIN -%>
-
-<div class="row">
+<% if user_signed_in? %>
+  <div class="row">
   <div class="col-md-9">
     <ul id="conversations-list">
       <% @conversations.each do |conversation| %>
@@ -59,6 +52,17 @@
     </div>
   </div>
 </div>
+<% end %>
+
+<%# RUBY CODE DO NOT TOUCH - NEEDED FOR DEVISE%>
+<%if notice %>
+  <p class= "alert alert_success"><%=notice %> </p>
+<% end %>
+<% if alert %>
+  <p class ="alert alert-danger"> <%=alert %> </p>
+<% end %>
+<%-# DO NOT TOUCH CODE RIGHT ABOVE THIS COMMENT IT IS CRITICAL FOR  DEVISE LOGIN -%>
+
 
 <%# do not remove yield this is where the layout switches to the page it is in.%>
 <%= yield %>
