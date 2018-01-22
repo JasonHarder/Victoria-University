@@ -1,6 +1,6 @@
 development:
   adapter: postgresql
-  database: db/victoria_development
+  database: victoria_development
   pool: 5
   timeout: 5000
 
@@ -9,11 +9,11 @@ development:
 # Do not set this db to the same as development or production.
 test:
   adapter: postgresql
-  database: db/victoria_test
+  database: victoria_test
   pool: 5
   timeout: 5000
 
 production:
   adapter: postgresql
-  database: db/victoria_production
+  database: victoria_production
   host: localhost

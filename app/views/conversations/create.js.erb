@@ -1,20 +1,13 @@
-let conversations = $('#conversations-list');
-let conversation = conversations.find("[data-conversation-id='"+"" <%= @conversation.id%>" +"']");
+var conversations = $('#conversations-list');
+var conversation = conversations.find("[data-conversation-id='" + "<%= @conversation.id %>" + "']");
 
-if (conversation.length !==1) {
-    conversations.append("<%= j(render 'conversations/conversation', conversation: @conversation, user: current_user) %>");
-    conversation = conversations.find("[data-conversation-id='" + "<%=@conversation.id %> +"']");
-
+if (conversation.length !== 1) {
+  conversations.append("<%= j(render 'conversations/conversation', conversation: @conversation, user: current_user) %>");
+  conversation = conversations.find("[data-conversation-id='" + "<%= @conversation.id %>" + "']");
 }
 
 conversation.find('.panel-body').show();
 
-let messages_list = conversation.find('.messages-list');
-let  height = messages_list[0].scrollHeight;
+var messages_list = conversation.find('.messages-list');
+var height = messages_list[0].scrollHeight;
 messages_list.scrollTop(height);
-
-
-<% #//remember this filename needs to be create.js.erb change back after sytax highlighting isnt needed. %>
-<% # // we are trying to find an existing conversation window here , if we do not find one (using length) we add a new conversation to the conversations list div. %> 
-<% # //if we add it we need to reassign to the conversation variable the added element later we use the show () method to display a window and lastly we check its height and scroll to the bottom %>
-<% #//since all new messages should be sent from the bottom of the conversation. %>

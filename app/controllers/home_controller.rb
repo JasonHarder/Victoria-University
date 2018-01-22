@@ -1,15 +1,9 @@
 class HomeController < ApplicationController
   def index
     session[:conversations] ||= []
-    
-    # write something like if conversation id exists use code below , if not create a new conversation.
 
     @users = User.all.where.not(id: current_user)
     @conversations = Conversation.includes(:recipient, :messages)
-                                          .find(session[:conversations])
+                                 .find(session[:conversations])
   end
 end
-
-# We are including other models in @ conversations to avoid n+1 queries under @user queries we are displaying all users that are not us (in the chat list)
-#It is much faster to issue 1 query which returns 100 results than to issue 100 queries which each return 1 result. (essentially more queries than needed is an N+ problem.)
-#generating multiple queries being the N+1 query problem

@@ -1,5 +1,4 @@
 class ConversationsController < ApplicationController
-
   def create
     @conversation = Conversation.get(current_user.id, params[:user_id])
 
