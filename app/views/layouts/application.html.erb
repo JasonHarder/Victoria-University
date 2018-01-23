@@ -14,18 +14,30 @@
   <body>
 
 <%# Ruby code connected to successful login giving them the ability to see conversation stuff  if they are logged in. may need to change placement later for better look.%>
-
-<p class="navbar-text pull-right">
-
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<nav class="navbar navbar-inverse bg-inverse">
+   <a href='/academic'>Academic</a>
+   <a href="/admission">Admission</a>
+   <a href="/campus">Campus</a>
+   <a href="/contact/">Contact</a>
+   <a href="/news">News</a>
+   <a href="/schools">Schools</a>
+   <a href="/charges/new">Make an impact</a>
+  <div class = "logins">
+     <% if user_signed_in? %>
+      Logged in as <strong><%= current_user.email %></strong>.
+     <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+     <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 
 <% else %>
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
+  <!-- Navbar content -->
+</nav>
+
+<p class="navbar-text pull-right">
+
+
 
 <% if user_signed_in? %>
   <div class="row">
