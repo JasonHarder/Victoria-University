@@ -1,8 +1,9 @@
-<h2>Sign up</h2>
+<h2>Apply here to speak to victoria U administration and </h2>
+<%# placeholder text in h2 above ^^%>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
+ 
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -19,6 +20,7 @@
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
+
   </div>
 
   <div class="actions">
@@ -27,3 +29,8 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+<%# Rest of devise forms go here required:name, telephone, age, address, email, state of origin are all mandatory fields %>
+<%# Stuff not manditory but going into the signup form (mark it with an astrisk that it isn't manditory or whatever is alternativly)%>
+
+<%#FIND DEVISE WAY TO ADD FIELDS TO USERS. #%>
