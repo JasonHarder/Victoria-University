@@ -5,3 +5,13 @@
     "jquery": "^3.2.1"
   }
 }
+
+
+{
+  "name": "victoria",
+  "description": "victoria u builds",
+  "version": "1.0.0",
+  "engines": {
+    "node": "8.6.0"
+  }
+}
