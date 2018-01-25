@@ -13,34 +13,71 @@
 
   <body>
 
-<%# Ruby code connected to successful login giving them the ability to see conversation stuff  if they are logged in. may need to change placement later for better look.%>
-<nav class="navbar navbar-inverse bg-inverse">
-   <a href= '/about'> About</a>
-   <a href='/academic'>Academics</a>
-   <a href="/admission">Admission</a>
-   <a href="/campus">Campus</a>
-   <a href="/contact/">Contact</a>
-   <a href="/news">News</a>
-   <a href="/schools">Schools</a>
-   <a href="/charges/new">Make an impact</a>
-  <div class = "logins">
-     <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.email %></strong>.
-     <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-     <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<%# RUBY CODE DO NOT TOUCH - NEEDED FOR DEVISE%>
+
+<%# DO NOT TOUCH CODE RIGHT ABOVE THIS COMMENT IT IS CRITICAL FOR  DEVISE LOGIN -%>
+
+
+<%# do not remove yield this is where the layout switches to the page it is in.%>
+
+  
+  
+ 
+
+<nav class="navbar navbar-inverse">
+   <div class="container-fluid" style="background-color:rgb(112, 111, 111);">
+     <div class="navbar-header">
+       <img src="12a.jpg" width="200" height="100">
+     </div>
+     
+     <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Admission <span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li><a href="#">Undergrad</a></li>
+           </ul>
+         </li>
+         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Academics<span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li><a href="#">Structures</a></li>
+             <li><a href="#">Management Policies</a></li>
+           </ul>
+         </li>
+         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Campus<span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li><a href="#">Locations</a></li>
+             <li><a href="#">Asthetics</a></li>
+             <li><a href="#">Amenities</a>
+             </li>
+           </ul>
+         </li>
+         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Schools<span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li><a href="#">Natural/Applied Sciences</a></li>
+             <li><a href="#">Management and Technology</a></li>
+             <li><a href="#">Creative arts and Applied Social Sciences</a></li>
+           </ul>
+         </li>
+         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact Us<span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li><a href="#">Social Media</a></li>
+           </ul>
+         </li>
+       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Interested in Vic University?</a></li> 
+       <%# above will link to form for people to indicate intrest and send their info below will send to vicrit moogle or w.e%>
+       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+     </ul>
+   </div>
+ </nav>
+ 
+ <%if notice %>
+  <p class= "alert alert_success"><%=notice %> </p>
 <% end %>
-  <!-- Navbar content -->
-</nav>
+<% if alert %>
+  <p class ="alert alert-danger"> <%=alert %> </p>
+<% end %>
 
-<p class="navbar-text pull-right">
-
-
-
-<% if user_signed_in? %>
+ <% if user_signed_in? %>
   <div class="row">
   <div class="col-md-9">
     <ul id="conversations-list">
@@ -67,21 +104,28 @@
 </div>
 <% end %>
 
-<%# RUBY CODE DO NOT TOUCH - NEEDED FOR DEVISE%>
-<%if notice %>
-  <p class= "alert alert_success"><%=notice %> </p>
-<% end %>
-<% if alert %>
-  <p class ="alert alert-danger"> <%=alert %> </p>
-<% end %>
-<%-# DO NOT TOUCH CODE RIGHT ABOVE THIS COMMENT IT IS CRITICAL FOR  DEVISE LOGIN -%>
 
 
-<%# do not remove yield this is where the layout switches to the page it is in.%>
-<%= yield %>
-  
-  
+
+<footer class "adminlogin"> <p> <% if user_signed_in? %>
+   <%= link_to "Admin Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
+</p>  
+<% end %>
+
+ </footer>
+ <%= yield %>
+
   </body>
 
 
 </html>
+
+
+
+<p class="navbar-text pull-right">
+
+
+
+
