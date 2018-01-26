@@ -27,11 +27,5 @@ Rails.application.routes.draw do
       post :close
     end
     resources :messages, only: [:create]
-    
-
-
-
-
-
-  end
+   end
 end
