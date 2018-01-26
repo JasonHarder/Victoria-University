@@ -18,10 +18,7 @@ class ConversationsController < ApplicationController
       format.js
     end
   end
-
-  def show
-  end 
-
+  
   private
 
   def add_to_conversations
