@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/' => 'home#index' 
 
+  get '/conversations/#{ids}' => redirect('home#index') 
+  
   devise_for :users, controllers: {registrations: "registrations"}
 
   resources :charges
