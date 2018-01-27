@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
+
+
   root 'home#index'
   get '/' => 'home#index' 
   
   devise_for :users, controllers: {registrations: "registrations"}
 
+  resources :events
+
   resources :charges
-  
-  resources :news
-  
+    
   resources :home, only: [:index]
   
   resources :campus, only: [:index]

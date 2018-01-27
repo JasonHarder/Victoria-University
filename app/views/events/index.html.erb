@@ -1,0 +1,19 @@
+<h1>Victoria U events!</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th><br>Url</th>
+    <th><br><br>Body </th>
+     
+  </tr>
+ 
+  <% @events.each do |event| %>
+    <tr>
+      <td><%= event.title %></td>
+      <td><%= event.url %></td>
+      <td><%= event.body %></td>
+      <td> <%= link_to 'Show', event_path(event) %> </td>
+    </tr>
+  <% end %>
+</table>

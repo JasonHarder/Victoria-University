@@ -21,7 +21,9 @@
 
 <%# do not remove yield this is where the layout switches to the page it is in.%>
 
-  
+<div class = "stickyproposal">
+<%# provide ability to donate in a stick navbar here - connect it to the charges/new stripe controller%>
+</div>
   
  
 
@@ -30,20 +32,31 @@
      <div class="navbar-header">
        <img src="12a.jpg" width="200" height="100">
      </div>
+
      
      <ul class="nav navbar-nav navbar-right">
-         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Admission <span class="caret"></span></a>
+         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/admission">Admission <span class="caret"></span></a>
            <ul class="dropdown-menu">
              <li><a href="#">Undergrad</a></li>
            </ul>
          </li>
-         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Academics<span class="caret"></span></a>
+
+               <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/about">About us<span class="caret"></span></a>
            <ul class="dropdown-menu">
              <li><a href="#">Structures</a></li>
              <li><a href="#">Management Policies</a></li>
            </ul>
          </li>
-         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Campus<span class="caret"></span></a>
+       
+       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/academic">Academics<span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li><a href="#">Structures</a></li>
+             <li><a href="#">Management Policies</a></li>
+           </ul>
+         </li>
+     
+       
+         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/campus">Campus<span class="caret"></span></a>
            <ul class="dropdown-menu">
              <li><a href="#">Locations</a></li>
              <li><a href="#">Asthetics</a></li>
@@ -51,14 +64,25 @@
              </li>
            </ul>
          </li>
-         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Schools<span class="caret"></span></a>
+
+           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/events">Events<span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li><a href="#">Locations</a></li>
+             <li><a href="#">Asthetics</a></li>
+             <li><a href="#">Amenities</a>
+             </li>
+           </ul>
+         </li>
+
+
+         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/schools">Schools<span class="caret"></span></a>
            <ul class="dropdown-menu">
              <li><a href="#">Natural/Applied Sciences</a></li>
              <li><a href="#">Management and Technology</a></li>
              <li><a href="#">Creative arts and Applied Social Sciences</a></li>
            </ul>
          </li>
-         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact Us<span class="caret"></span></a>
+         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/contact">Contact Us<span class="caret"></span></a>
            <ul class="dropdown-menu">
              <li><a href="#">Social Media</a></li>
            </ul>
@@ -104,18 +128,7 @@
 </div>
 <% end %>
 
-
-
-
-<footer class "adminlogin"> <p> <% if user_signed_in? %>
-   <%= link_to "Admin Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
-</p>  
-<% end %>
-
- </footer>
- <%= yield %>
+<%= yield %>
 
   </body>
 
