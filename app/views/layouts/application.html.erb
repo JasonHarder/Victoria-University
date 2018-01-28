@@ -24,16 +24,12 @@
 <div class = "stickyproposal">
 <%# provide ability to donate in a stick navbar here - connect it to the charges/new stripe controller%>
 </div>
-  
- 
-
 <nav class="navbar navbar-inverse">
    <div class="container-fluid" style="background-color:rgb(112, 111, 111);">
      <div class="navbar-header">
        <img src="12a.jpg" width="200" height="100">
      </div>
 
-     
      <ul class="nav navbar-nav navbar-right">
          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/admission">Admission <span class="caret"></span></a>
            <ul class="dropdown-menu">
@@ -47,15 +43,14 @@
              <li><a href="#">Management Policies</a></li>
            </ul>
          </li>
-       
+
        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/academic">Academics<span class="caret"></span></a>
            <ul class="dropdown-menu">
              <li><a href="#">Structures</a></li>
              <li><a href="#">Management Policies</a></li>
            </ul>
          </li>
-     
-       
+
          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/campus">Campus<span class="caret"></span></a>
            <ul class="dropdown-menu">
              <li><a href="#">Locations</a></li>
@@ -93,7 +88,7 @@
      </ul>
    </div>
  </nav>
- 
+
  <%if notice %>
   <p class= "alert alert_success"><%=notice %> </p>
 <% end %>
@@ -128,6 +123,12 @@
 </div>
 <% end %>
 
+<div class "adminlogin"> <p>
+   <% if user_signed_in? %>
+     <%= link_to "Admin Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+   <% end %>
+</div>  
+
 <%= yield %>
 
   </body>
@@ -137,7 +138,7 @@
 
 
 
-<p class="navbar-text pull-right">
+
 
 
 

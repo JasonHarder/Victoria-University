@@ -1,13 +1,5 @@
-<%form_with scope: :event, url: events_path, local: true do |form| %>
-
-    <%if @event.errors.any?%>
-        <div id= "error_explaination">
-        <h2>
-        <%= pluralize(@event.errors.count,"error") %>
-        prohibited this article from being saved 
-        </h2>
-        <ul>
-        <% @event.errors.full_messages.each do |msg| %>
-         <li> <%= msg %> </li>
-        <% end %>
-    <% end %>
+<h1>New Event</h1>
+ 
+<%= render 'form' %>
+ 
+<%= link_to 'Back', events_path %>
