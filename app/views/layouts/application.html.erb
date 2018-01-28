@@ -123,15 +123,15 @@
 </div>
 <% end %>
 
-<div class "adminlogin"> <p>
-   <% if user_signed_in? %>
-     <%= link_to "Admin Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-   <% end %>
-</div>  
+
 
 <%= yield %>
 
-  </body>
+
+
+<%= render :partial => "layouts/footer" %>
+
+
 
 
 </html>
