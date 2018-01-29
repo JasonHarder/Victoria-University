@@ -13,13 +13,12 @@
       <td><%= event.url%> </td>
       <td><%= event.body%>  </td>
     </tr>
-  <% end %>
-
-    <% @events.each do |event| %>
-    <% if user_signed_in? %>
-        <td><%= link_to 'Show', event_path(event) %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Delete',event_path(event),
+    
+  <% if user_signed_in? %>
+      <td><%= link_to 'New' , new_event_path(event)%>
+      <td><%= link_to 'Show', event_path(event) %></td>
+      <td><%= link_to 'Edit', edit_event_path(event) %></td>
+      <td><%= link_to 'Delete',event_path(event),
                 method: :delete,
                 data: { confirm: 'Are you sure?'} %> </td>
     <% end %>
