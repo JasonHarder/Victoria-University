@@ -1,3 +1,7 @@
+<% if user_signed_in? %>
+  <%= link_to 'New Event', new_event_path %>
+<% end %>
+
 
 <table>
   <tr>
@@ -22,6 +26,8 @@
                 method: :delete,
                 data: { confirm: 'Are you sure?'} %> </td>
     <% end %>
+      
+
   <% end %>
 </table>
 
