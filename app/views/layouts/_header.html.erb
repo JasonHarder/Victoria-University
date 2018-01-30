@@ -1,0 +1,7 @@
+<div class = "admincontrol">
+    <% if user_signed_in? %>
+    <button type="button" class="btn btn-danger" id= "adlogout">  <%= link_to "Admin Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> </button>
+    <% end %>
+</div>
+
+</body>
