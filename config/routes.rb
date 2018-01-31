@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'interested/index'
+
   root 'home#index'
   get '/' => 'home#index'
 
-  get'interested'=> 'interested#index' 
+  get 'interested' => 'interested#index'
 
   devise_for :users, controllers: {registrations: "registrations"}
 
