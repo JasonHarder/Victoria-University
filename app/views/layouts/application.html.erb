@@ -21,13 +21,8 @@
 
 <%# do not remove yield this is where the layout switches to the page it is in.%>
 
-
-
-  <div class="wrapper">
-<br><br>
 <div class = "stickyproposal">
 <%# provide ability to donate in a stick navbar here - connect it to the charges/new stripe controller%>
-#
 </div>
 <nav class="navbar navbar-inverse">
    <div class="container-fluid" style="background-color:rgb(112, 111, 111);">
@@ -44,7 +39,7 @@
 
                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/about">About us<span class="caret"></span></a>
            <ul class="dropdown-menu">
-             <li><a href="@">Structures</a></li>
+             <li><a href="#">Structures</a></li>
              <li><a href="#">Management Policies</a></li>
            </ul>
          </li>
@@ -62,10 +57,10 @@
              <li><a href="#">Asthetics</a></li>
              <li><a href="#">Amenities</a>
              </li>
-           </ul>
+           </ul>i
          </li>
 
-           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/events">Events<span class="caret"></span></a>
+           <li class="dropdown"><a class="dronpdown-toggle" data-toggle="dropdown" href="/events">Events<span class="caret"></span></a>
            <ul class="dropdown-menu">
              <li><a href="#">Locations</a></li>
              <li><a href="#">Asthetics</a></li>
@@ -102,51 +97,29 @@
 <% end %>
 
 
- <% if user_signed_in? %>
-  <div class="row">
-  <div class="col-md-9">
-    <ul id="conversations-list">
-      <% @conversations.each do |conversation| %>
-        <%= render 'conversations/conversation', conversation: conversation, user: current_user %>
-      <% end %>
-    </ul>
-  </div>
 
 
-  <div class="col-md-3">
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h3 class="panel-title">User list</h3>
-      </div>
-      <div class="panel-body">
-        <ul>
-          <% @users.each do |user| %>
-           <li><%= link_to user.email, conversations_path(user_id: user), remote: true, method: :post %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-<% end %>
-
+<%= render :partial => "layouts/header" %>
 
 
 <%= yield %>
 
-<footer class "adminlogin"> <p> <% if user_signed_in? %>
-   <%= link_to "Admin Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
-</p>
-<% end %>s
-
 
 <%= render :partial => "layouts/footer" %>
+<%= render :partial => 'layouts/userpanel'%>
 
 
 
 
 </html>
+
+
+
+
+
+
+</html>
+
+
 
 

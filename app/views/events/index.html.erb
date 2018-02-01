@@ -1,3 +1,10 @@
+<% if user_signed_in? %>
+  <div class = "admincreate">
+    <% if user_signed_in? %>
+      <p> <button type="button" class="btn btn-primary"><%= link_to 'New event' , new_event_path(@events)%> </button> </p>
+  </div>
+<% end %>
+
 
 <table>
   <tr>
@@ -7,22 +14,26 @@
     <th colspan="2"></th>
   </tr>
 
-  <% @events.each do |event| %>
-    <tr>
-      <td><%= event.title%> </td>
-      <td><%= event.url%> </td>
-      <td><%= event.body%>  </td>
-    </tr>
-    
-  <% if user_signed_in? %>
-      <td><%= link_to 'New' , new_event_path(event)%>
-      <td><%= link_to 'Show', event_path(event) %></td>
-      <td><%= link_to 'Edit', edit_event_path(event) %></td>
-      <td><%= link_to 'Delete',event_path(event),
-                method: :delete,
-                data: { confirm: 'Are you sure?'} %> </td>
+
+    <% @events.each do |event| %>
+      <tr>
+        <td class = "eventtitle"><%= event.title%> </td>
+        <td class = "eventurl"><%= event.url%> </td>
+        <td class = "eventbody"><%= event.body%>  </td>
+
+      <% if user_signed_in? %>
+        <div class =".btn-group-xs">
+        <td> <button type="button" class="btn btn-primary"><%= link_to 'Show', event_path(event) %> </button>  </td>
+        <td> <button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_event_path(event) %> </button> </td>
+        <td> <button type="button" class="btn btn-primary"><%= link_to 'Delete',event_path(event),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?'} %> </button></td>
+        </div>
+      </tr>
+      <% end %>
     <% end %>
   <% end %>
-</table>
 
+
+</table>
 

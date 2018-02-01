@@ -1,19 +1,16 @@
-  <div class "adminlogin"> <p>
-    <% if user_signed_in? %>
-      <%= link_to "Admin Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-    <% end %>
-  </div>
+<p>HERE BE THE FOOTER __________________ </p>
 
-  <% if user_signed_in? %>
+<% if user_signed_in? %>
   <div class="row">
-    <div class="col-md-9">ss
-     <ul id="conversations-list">
+  <div class="col-md-9">
+    <ul id="conversations-list">
       <% @conversations.each do |conversation| %>
         <%= render 'conversations/conversation', conversation: conversation, user: current_user %>
       <% end %>
     </ul>
-  <% end %>
   </div>
 
-
-  </body>
+<% end %>
+<div class = "end">
+<p> here be end </p>
+</div>

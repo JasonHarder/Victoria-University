@@ -51,3 +51,23 @@ ul {
   color: wheat
 }
 
+.admincontrol {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.admincontrol > .btn-primary > a {
+  color: white;
+}
+
+.userpanel {
+  width: 20%;
+  height: 80%;
+  border: 1px solid blue;
+}
+
+.userpanel > .col-md-3 {
+  width: 100%;
+}
