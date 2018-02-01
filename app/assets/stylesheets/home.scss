@@ -16,18 +16,49 @@ body{ background-image:linear-gradient(rgba(48, 23, 15, 0.65),
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 0px;
-    height: 0;
+
+
     overflow: hidden;
 }
 .video-container iframe,
 .video-container object,
 .video-container embed {
-    position: absolute;
+    position: centre;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 800px;
+    height: 500px;
 }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left, .right {
+  width: 25%;
+}
+
+.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 
 
 

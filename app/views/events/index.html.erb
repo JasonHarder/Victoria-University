@@ -1,0 +1,28 @@
+
+<table>
+  <tr>
+    <th>Title:</th>
+    <th>Url:</th>
+    <th>Body: </th>
+    <th colspan="2"></th>
+  </tr>
+
+  <% @events.each do |event| %>
+    <tr>
+      <td><%= event.title%> </td>
+      <td><%= event.url%> </td>
+      <td><%= event.body%>  </td>
+    </tr>
+    
+  <% if user_signed_in? %>
+      <td><%= link_to 'New' , new_event_path(event)%>
+      <td><%= link_to 'Show', event_path(event) %></td>
+      <td><%= link_to 'Edit', edit_event_path(event) %></td>
+      <td><%= link_to 'Delete',event_path(event),
+                method: :delete,
+                data: { confirm: 'Are you sure?'} %> </td>
+    <% end %>
+  <% end %>
+</table>
+
+
