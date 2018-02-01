@@ -20,7 +20,7 @@
         <td class = "eventtitle"><%= event.title%> </td>
         <td class = "eventurl"><%= event.url%> </td>
         <td class = "eventbody"><%= event.body%>  </td>
-      
+
       <% if user_signed_in? %>
         <div class =".btn-group-xs">
         <td> <button type="button" class="btn btn-primary"><%= link_to 'Show', event_path(event) %> </button>  </td>

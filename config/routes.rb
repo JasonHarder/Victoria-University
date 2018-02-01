@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   resources :events
 
   resources :charges
-
   resources :home, only: [:index]
 
   resources :campus, only: [:index]

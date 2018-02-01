@@ -1,6 +1,16 @@
 <h1>Contact#index</h1>
 <p>Find me in app/views/contact/index.html.erb</p>
 
+<<<<<<< HEAD
+<div class "adminlogin"> <p>
+   <% if user_signed_in? %>
+     <%= link_to "Admin Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+   <% else %>
+     <%= link_to "Admin Login", new_user_session_path, :class => 'navbar-link' %>
+   <% end %>
+</div>  
+=======
         <button type = "button" class = "btn-primary">   <%= link_to "Admin Login", new_user_session_path %>  </button>
 
 
+>>>>>>> 47d41a57fae1d686d68603c7ce51e81981e128ac
