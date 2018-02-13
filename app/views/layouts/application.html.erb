@@ -37,17 +37,17 @@
            </ul>
          </li>
 
-               <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/about">About us<span class="caret"></span></a>
+               <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/teachers">About us<span class="caret"></span></a>
            <ul class="dropdown-menu">
-             <li><a href="/about">Structures</a></li>
-             <li><a href="/about">Management Policies</a></li>
+             <li><a href="/teachers">Our Leaders</a></li>
+             <li><a href="/teachers">Our Teachers</a></li>
            </ul>
          </li>
 
        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/academic">Academics<span class="caret"></span></a>
            <ul class="dropdown-menu">
-             <li><a href="/about">Structures</a></li>
-             <li><a href="/about">Management Policies</a></li>
+             <li><a href="/academic">Structures</a></li>
+             <li><a href="/academic">Management Policies</a></li>
            </ul>
          </li>
 
@@ -84,7 +84,7 @@
          </li>
        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Interested in Vic University?</a></li>
        <%# above will link to form for people to indicate intrest and send their info below will send to vicrit moogle or w.e%>
-       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+       <li><a href="/users/sign_in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
      </ul>
    </div>
  </nav>
@@ -95,21 +95,10 @@
 <% if alert %>
   <p class ="alert alert-danger"> <%=alert %> </p>
 <% end %>
-
-
-
-
 <%= render :partial => "layouts/header" %>
-
-
 <%= yield %>
-
-
 <%= render :partial => "layouts/footer" %>
 <%= render :partial => 'layouts/userpanel'%>
-
-
-
 
 </html>
 

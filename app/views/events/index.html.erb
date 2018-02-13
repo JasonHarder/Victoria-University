@@ -16,8 +16,10 @@
 
 
     <% @events.each do |event| %>
+    <% @pictures.each do |picture| %>
       <tr>
         <td class = "eventtitle"><%= event.title%> </td>
+        <td class = 'event picture'> <img src=<%= picture.url %></td>
         <td class = "eventurl"><%= event.url%> </td>
         <td class = "eventbody"><%= event.body%>  </td>
 
@@ -25,7 +27,7 @@
         <div class =".btn-group-xs">
         <td> <button type="button" class="btn btn-primary"><%= link_to 'Show', event_path(event) %> </button>  </td>
         <td> <button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_event_path(event) %> </button> </td>
-        <td> <button type="button" class="btn btn-primary"><%= link_to 'Delete',event_path(event),
+        <td> <button type="button" class="btn btn-primary"><%= link_to 'Delete',event_path(event),picture_path(picture),
                       method: :delete,
                       data: { confirm: 'Are you sure?'} %> </button></td>
         </div>

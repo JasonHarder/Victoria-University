@@ -1,0 +1,35 @@
+<h1>About#index</h1>
+<p>Find me in app/views/about/index.html.erb</p>
+<div class="row">
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-8" style="background-color:lavenderblush;">.col-sm-8</div>
+  </div>
+
+<% if user_signed_in? %>
+  <div class = "teachercreate">
+    <% if user_signed_in? %>
+      <p> <button type="button" class="btn btn-primary"><%= link_to 'New staff member' , new_teacher_path(@teacher)%> </button> </p>
+  </div>
+<% end %>
+
+
+
+      <% @teachers.each do |teacher| %>
+      <tr>
+        <td class = "teacherpicture"><%=teacher.picture%> </td>
+        <td class = "teachername"><%= teacher.name%> </td>
+        <td class = "teachertitle"><%= teacher.title%> </td>
+        <td class = "teacherbody"><%= teacher.body%>  </td>
+
+      <% if user_signed_in? %>
+        <div class =".btn-group-xs">
+        <td> <button type="button" class="btn btn-primary"><%= link_to 'Show', teacher_path(teacher) %> </button>  </td>
+        <td> <button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_teacher_path(teacher) %> </button> </td>
+        <td> <button type="button" class="btn btn-primary"><%= link_to 'Delete',teacher_path(teacher),picture_path(picture),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?'} %> </button></td>
+        </div>
+      </tr>
+      <% end %>
+    <% end %>
+  <% end %>

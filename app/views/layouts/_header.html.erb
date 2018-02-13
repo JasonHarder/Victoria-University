@@ -1,15 +1,16 @@
 <div class = "admincontrol">
     <% if user_signed_in? %>
         <button type="button" class="btn btn-danger" id= "adlogout">  <%= link_to "Admin Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> </button>
-        <button type = "button" class = "btn-primary">   <%= link_to "About", about_index_path %>  </button>
+        <button type = "button" class = "btn-primary">   <%= link_to "About", teachers_path %>  </button>
         <button type = "button" class = "btn-primary">   <%= link_to "Academics", academic_index_path %>  </button>
         <button type = "button" class = "btn-primary">   <%= link_to "Admission", admission_index_path %>  </button>
         <button type = "button" class = "btn-primary">   <%= link_to "Campus", campus_path %>  </button>
         <button type = "button" class = "btn-primary">   <%= link_to "Events", events_path %>  </button>
         <button type = "button" class = "btn-primary">   <%= link_to "Schools", schools_path %>  </button>
         <button type = "button" class = "btn-primary">   <%= link_to "Contact", contact_index_path %>  </button>
-        <button type = "button" class = "btn-primary">   <%= link_to "Interested?", interested_path %>  </button>
+        <button type = "button" class = "btn-primary">   <%= link_to "User Controls", root_path %>  </button>
     <% end %>
+
 </div>
 
 <div >

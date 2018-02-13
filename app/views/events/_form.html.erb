@@ -1,14 +1,14 @@
 
-<%= form_with model: @event, local: true do |form| %>
-
-  <% if @event.errors.any? %>
+<%= form_with model: @event && @picture, local: true do |form| %>
+  
+  <% if @event.errors.any? || @picture.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(@event.errors.count, "error") %> prohibited
+        <%= pluralize(@event.errors.count, "error" || @picture.errors.count,"error") %> prohibited
         this article from being saved:
       </h2>
       <ul>
-        <% @event.errors.full_messages.each do |msg| %>
+        <% @event.errors && @picture.errors.full_messages.each do |msg|%>
           <li><%= msg %></li>
         <% end %>
       </ul>
@@ -20,6 +20,11 @@
     <% end %>
         <%= form.text_field :title %>
   </p>
+
+  <% if user_signed_in? %>
+    <%=form.label :picture  %><br>
+  <% end %>
+    <%= form.text_area :picture %>
 
   <p>
     <% if user_signed_in? %>
@@ -35,10 +40,19 @@
         <%= form.text_area :body %>
   </p>
 
+
   <p>
+<<<<<<< Updated upstream
    <button class = "submit"> <%= form.submit %> </button>
   </p>
 
 
 
+=======
+  <% if user_signed_in? %>
+    <button class = "submit"> <%= form.submit %> </button>
+  <% end %>
+  </p>
+
+>>>>>>> Stashed changes
 <% end %>
