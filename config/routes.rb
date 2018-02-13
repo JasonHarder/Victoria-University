@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'interested/index'
 
   root 'home#index'
+  
   get '/' => 'home#index'
 
   get 'interested' => 'interested#index'
@@ -10,6 +11,8 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: "registrations"}
 
   resources :events
+
+  resources :pictures, only [:create :new :update :delete]
 
   resources :charges
   resources :home, only: [:index]
