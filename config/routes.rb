@@ -12,9 +12,11 @@ Rails.application.routes.draw do
 
   resources :events
 
-  resources :pictures, only [:create :new :update :delete]
+  resources :pictures, only: [:create , :new , :update , :delete]
 
+  resources :teachers 
   resources :charges
+  
   resources :home, only: [:index]
 
   resources :campus, only: [:index]
