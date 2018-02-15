@@ -16,7 +16,7 @@
 
       <% @teachers.each do |teacher| %>
       <tr>
-        <td class = "teacherpicture"><%=teacher.picture%> </td>
+        <%# <td class = "teacherpicture"><%=teacher.picture%> </td> #%>
         <td class = "teachername"><%= teacher.name%> </td>
         <td class = "teachertitle"><%= teacher.title%> </td>
         <td class = "teacherbody"><%= teacher.body%>  </td>
@@ -25,7 +25,7 @@
         <div class =".btn-group-xs">
         <td> <button type="button" class="btn btn-primary"><%= link_to 'Show', teacher_path(teacher) %> </button>  </td>
         <td> <button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_teacher_path(teacher) %> </button> </td>
-        <td> <button type="button" class="btn btn-primary"><%= link_to 'Delete',teacher_path(teacher),picture_path(picture),
+        <td> <button type="button" class="btn btn-primary"><%= link_to 'Delete',teacher_path(teacher),
                       method: :delete,
                       data: { confirm: 'Are you sure?'} %> </button></td>
         </div>
@@ -33,3 +33,5 @@
       <% end %>
     <% end %>
   <% end %>
+
+  <# asjlkhdalkjds #>
