@@ -18,7 +18,7 @@
     <% @events.each do |event| %>
       <tr>
         <td class = "eventtitle"><%= event.title%> </td>
-        <td class = "event picture"> <img src= <%= picture.url %></td>
+        <td class = "eventpicture"> <img src= <%= picture.url %></td>
         <td class = "eventurl"><%= event.url %> </td>
         <td class = "eventbody"><%= event.body%></td>
       </tr>
@@ -32,8 +32,7 @@
                       data: { confirm: 'Are you sure?'} %> </button></td>
         </div>
       </tr>
-</table>
       <% end %>
     <% end %>
-  <% end %>
+</table>
 <% end %>

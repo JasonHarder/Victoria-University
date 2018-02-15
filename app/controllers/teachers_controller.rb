@@ -6,6 +6,7 @@ class TeachersController < ApplicationController
 
   def show
     @teacher = Teacher.find(params[:id])
+    @picture = Picture.find(params[:id])
   end
 
   def new
@@ -26,7 +27,7 @@ class TeachersController < ApplicationController
   end
 
   def update
-     @teacher = Teacher.find(params[:id])
+    @teacher = Teacher.find(params[:id])
 
     if @teacher.update(teacher_params)
       redirect_to @teacher

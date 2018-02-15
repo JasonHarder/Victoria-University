@@ -18,10 +18,10 @@ Rails.application.routes.draw do
   resources :charges
   resources :home, only: [:index]
   resources :campus, only: [:index]
-  resources :admission, only: [:index]
+  resources :admissions, only: [:index]
   resources :schools, only: [:index]
-  resources :contact, only: [:index]
-  resources :academic, only: [:index]
+  resources :contacts, only: [:index]
+  resources :academics, only: [:index]
 
   resources :conversations, only: [:create] do
     member do
