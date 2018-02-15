@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Picture.create(
+  name:  'Jason Jason',
+  url:    'http://bitmakerlabs.s3.amazonaws.com/photogur/house.jpg'
+)

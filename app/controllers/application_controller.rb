@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   private
 
   def load_conversations
-  @conversations = Conversation.all 
+  @conversations = Conversation.all
   end
 
   def load_messages

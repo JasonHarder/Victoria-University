@@ -14,17 +14,17 @@
     <th colspan="2"></th>
   </tr>
 
-
+# it may end up looking like <td class "event picture"> <img src - event.picture.url> since its nested
     <% @events.each do |event| %>
-    <% @pictures.each do |picture| %>
       <tr>
         <td class = "eventtitle"><%= event.title%> </td>
-        <td class = 'event picture'> <img src=<%= picture.url %></td>
-        <td class = "eventurl"><%= event.url%> </td>
-        <td class = "eventbody"><%= event.body%>  </td>
-
+        <td class = "event picture"> <img src= <%= picture.url %></td>
+        <td class = "eventurl"><%= event.url %> </td>
+        <td class = "eventbody"><%= event.body%></td>
+      </tr>
       <% if user_signed_in? %>
         <div class =".btn-group-xs">
+      <tr>
         <td> <button type="button" class="btn btn-primary"><%= link_to 'Show', event_path(event) %> </button>  </td>
         <td> <button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_event_path(event) %> </button> </td>
         <td> <button type="button" class="btn btn-primary"><%= link_to 'Delete',event_path(event),picture_path(picture),
@@ -32,10 +32,8 @@
                       data: { confirm: 'Are you sure?'} %> </button></td>
         </div>
       </tr>
+</table>
       <% end %>
     <% end %>
   <% end %>
-
-
-</table>
-
+<% end %>

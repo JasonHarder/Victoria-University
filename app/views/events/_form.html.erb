@@ -1,6 +1,6 @@
 
 <%= form_with model: @event && @picture, local: true do |form| %>
-  
+
   <% if @event.errors.any? || @picture.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -9,7 +9,7 @@
       </h2>
       <ul>
         <% @event.errors && @picture.errors.full_messages.each do |msg|%>
-          <li><%= msg %></li>
+          <li> <%= msg %></li>
         <% end %>
       </ul>
     </div>
@@ -28,7 +28,7 @@
 
   <p>
     <% if user_signed_in? %>
-         <%= form.label :url %> <br>
+        <%= form.label :url %> <br>
     <% end %>
         <%= form.text_field :url %>
   </p>
@@ -42,17 +42,9 @@
 
 
   <p>
-<<<<<<< Updated upstream
-   <button class = "submit"> <%= form.submit %> </button>
-  </p>
-
-
-
-=======
   <% if user_signed_in? %>
     <button class = "submit"> <%= form.submit %> </button>
   <% end %>
   </p>
 
->>>>>>> Stashed changes
 <% end %>

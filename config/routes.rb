@@ -1,36 +1,21 @@
 Rails.application.routes.draw do
 
-  get 'pictures/index'
-
-  get 'pictures/show'
-
-  get 'pictures/new'
-
-  get 'pictures/edit'
-
-  get 'pictures/create'
-
-  get 'pictures/update'
-
-  get 'pictures/destroy'
-
-  get 'interested/index'
-
   root 'home#index'
 
   get '/' => 'home#index'
 
-  get 'interested' => 'interested#index'
-
   devise_for :users, controllers: {registrations: "registrations"}
-  resources :events
 
-  resources :pictures, only: [:create , :new , :update , :delete]
+  resources :events do
+    resources :pictures
+  end
 
-  resources :teachers 
+
+  resources :teachers do
+    resources :pictures
+  end
 
   resources :charges
-
   resources :home, only: [:index]
   resources :campus, only: [:index]
   resources :admission, only: [:index]
