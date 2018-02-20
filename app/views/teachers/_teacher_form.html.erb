@@ -34,15 +34,6 @@
       <%= form.text_area :body %>
   </p>
 
-
-  <p>
-    <% if user_signed_in? %>
-      <%= form.file_field :picture %><br>
-    <% end %>
-      <%= form.text_area :picture %>
-  </p>
-
-
   <p>
       <button class = "submit"> Add Staff Member <%= form.submit %> </button>
   </p>
