@@ -1,6 +1,6 @@
 # README
 
-# This is written as if you do know HTML/CSS & JS but likely do not know Ruby/Rails.If this is a fellow intern reading that does not have Rails/Ruby in their stack then it was written with you in mind as much as possible.Since every intern I've worked with here does not know Rails/Ruby I am trying to walk you through and include useful resources.
+This is written as if you do know HTML/CSS & JS but likely do not know Ruby/Rails.If this is a fellow intern reading that does not have Rails/Ruby in their stack then it was written with you in mind as much as possible.Since every intern I've worked with here does not know Rails/Ruby I am trying to walk you through and include useful resources.
 
 
 #Section 1 also covers possible needed installs.
