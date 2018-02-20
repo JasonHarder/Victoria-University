@@ -10,3 +10,5 @@ Picture.create(
   name:  'Jason Jason',
   url:    'http://bitmakerlabs.s3.amazonaws.com/photogur/house.jpg'
 )
+
+Teacher.create!(name:"ben frank", body: "ben frank teaches teaching stuff",title:"headteacherguy", Picture_id => 1)

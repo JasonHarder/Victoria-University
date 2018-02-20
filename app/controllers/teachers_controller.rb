@@ -6,7 +6,6 @@ class TeachersController < ApplicationController
 
   def show
     @teacher = Teacher.find(params[:id])
-    @picture = Picture.find(params[:id])
   end
 
   def new
