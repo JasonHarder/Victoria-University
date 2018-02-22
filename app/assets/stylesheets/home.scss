@@ -3,144 +3,187 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body{ background-image:linear-gradient(rgba(48, 23, 15, 0.65),
-    rgba(47, 23, 15, 0.65)),
-    url("/assets/bg.jpg") ;
-    background-position: center center;
-    background-repeat:  no-repeat;
-    background-attachment: fixed;
-    background-size:  cover;
-    background-color: #999;
+  rgba(47, 23, 15, 0.65)),
+  url("/assets/bg.jpg") ;
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size:  cover;
+  background-color: #999;
 
 }
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 0px;
 
+.navbar a{
+color:orange;
+}
 
-    overflow: hidden;
+.col-lg-8{
+padding-top: 30px;
 }
-.video-container iframe,
-.video-container object,
-.video-container embed {
-    position: centre;
-    top: 0;
-    left: 0;
-    width: 800px;
-    height: 500px;
-}
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
-/* Create three unequal columns that floats next to each other */
-.column {
-    float: left;
-    padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
+.font{
+font-family: 'Bellefair', serif;
+color: RGB(252, 219, 210);
+font-size: 20px;
 }
 
-.left, .right {
-  width: 25%;
+.hoverfont{
+font-family: 'Satisfy', cursive;
+font-family: 'Bellefair', serif;
+color: #5aebad;
+font-size: 30px;
 }
 
-.middle {
-  width: 50%;
+
+
+
+/* ANIMATION 2*/
+
+@mixin fadeText($text-color, $direction : top, $offset : 2em, $transition: 0.5s ease-out) {  
+// text-color : dark
+$color: #fff;
+
+// direction : top
+$deg: 180deg;
+$pos: bottom;
+
+@if($text-color == 'light') {
+  $color: #000;
+  mix-blend-mode: screen;
+} @else {
+  mix-blend-mode: multiply;
 }
 
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+@if($direction == 'left') {
+  $deg: 90deg;
+  $pos: right;
+} @elseif ($direction == 'right') {
+  $deg: -90deg;
+  $pos: left;
+} @elseif ($direction == 'bottom') {
+  $deg: 0deg;
+  $pos: top;
 }
 
-  .wrap {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    background: #120103;
-    color: #fff;
-    text-align: center;
-  }
+position: relative;
 
-  header {
-    background: #3e474f;
-    box-shadow: 0 0.5em 1em #111;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 900;
-    width: 100%;
-  }
+&::after {
+  background: linear-gradient($deg, transparent, $color $offset) no-repeat $pos center / 100% 100%;
+  
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  pointer-events: none;
+  transition: $transition;
+}
 
-  header label {
-    color: #788188;
-    cursor: pointer;
-    display: inline-block;
-    line-height: 4.25em;
-    font-size: 1em;
-    font-weight: bold;
-    padding: 0 1em;
+&:hover::after {
+  @if($direction == 'left' or $direction == 'right') {
+    background-size: 0% 100%;  
+  } @else {
+    background-size: 100% 0%;
   }
+}
 
-  header label:hover {
-    background: #2e353b;
-  }
+}
 
-  .slide {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    z-index: 10;
-    padding: 8em 1em 0;
-    background-color: #120103;
-    background-position: 50% 50%;
-    background-size: cover;
-    transition: left 0s 0.75s;
-  }
+// Your text color should have good contrast (either very light or very dark, with the appropriate option passed above) or the entire block will start turning transparent
 
-  .slide-one {
-    background-image: url(https://placeimg.com/1000/480/any);
-  }
+.hoverfont{
+color: #fff;
+@supports(mix-blend-mode: screen){
+   @include fadeText(light, top, 3rem);
+} 
+}
 
-  .slide-two {
-    background-image: url(https://placeimg.com/1000/600/any);
-  }
+/* Pen styling */
+// This was on <body> but then it mysteriously broke on Chrome
+.wrapper {
+background: #222 url("/assets/homebg.jpg") 50% 50% / cover;
+display: flex;
+align-items: center;
+font: 18px/1.5 'Roboto', sans-serif;
+justify-content: center;
+min-height: 100vh;
+position: relative;
 
-  .slide-three {
-    background-image: url(https://placeimg.com/1200/480/any);
-  }
+&::before {
+  background: #222;
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  opacity: 0.5;
+}
+}
 
-  .slide-four {
-    background-image: url(https://placeimg.com/800/600/any);
-  }
+h1 {
+font-size: 32px;
+font-weight: 300;
+}
 
-  [id^="slide"]:checked + .slide {
-    left: 0;
-    z-index: 100;
-    transition: left 0.65s ease-out;
-  }
+.content {
+color: #fff;
+max-width: 600px;
+text-align: center;
+position: relative;
+}
 
-  .slide h1 {
-    opacity: 0;
-    transform: translateY(100%);
-    transition: transform 0.5s 0.5s, opacity 0.5s;
-  }
 
-  [id^="slide"]:checked + .slide h1 {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.5s 0.5s;
-  }
 
+
+/*anim 3*/
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+.font { 
+  font: bold 300% Consolas, Monaco, monospace;
+  border-right: .1em solid black;
+  width: 16.5em; 
+  width: 21ch;
+  margin: 2em 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: typing 2s steps(21, end),
+             blink-caret .5s step-end infinite alternate;
+}
+
+.parag{
+padding-top: 20px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color: antiquewhite;
+font-size: 50px;
+}
+
+
+
+div.transbox {
+margin: 30px;
+background-color: #ffffff;
+border: 1px solid black;
+opacity: 0.6;
+filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transbox p {
+margin: 5%;
+font-weight: normal;
+color: #545454;
+font-family: 'Satisfy', cursive;
+font-family: 'Bellefair', serif;
+height: 640px;
+font-size: 30px;
+
+
+}
 
 
 

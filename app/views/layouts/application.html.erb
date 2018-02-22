@@ -4,7 +4,8 @@
     <title>Victoria</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet"> 
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,32 +14,31 @@
 
   <body>
 
-
-<%# RUBY CODE DO NOT TOUCH - NEEDED FOR DEVISE%>
-
-<%# DO NOT TOUCH CODE RIGHT ABOVE THIS COMMENT IT IS CRITICAL FOR  DEVISE LOGIN -%>
-
-
-<%# do not remove yield this is where the layout switches to the page it is in.%>
-
-
- <%if notice %>
+<%if notice %>
   <p class= "alert alert_success"><%=notice %> </p>
 <% end %>
 <% if alert %>
   <p class ="alert alert-danger"> <%=alert %> </p>
 <% end %>
+
+
 <%= render :partial => "layouts/header" %>
+<%= render :partial => 'layouts/donate' %>
+
+
 <%= yield %>
-<%= render :partial => "layouts/footer" %>
+<%# try <%= yield :header or other yield :methods to make sticky nav display properly %> 
+
+
+
+<%= render :partial => 'layouts/footer' %>
 <%= render :partial => 'layouts/userpanel'%>
 
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
 </html>
-
-
-
-
-
-
-
-
