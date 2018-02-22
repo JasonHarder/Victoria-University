@@ -80,9 +80,20 @@
    background-color: aliceblue;
  }
  
- .dropdown-toggle{
+ .dropdown-toggle {
    font-family: 'Shrikhand', cursive;
    font-color: #fbac13;
  }
 
- 
+ .stickyproposal {
+   background-color: wheat;
+   text-align: center;
+   overflow: hidden;
+
+ }
+
+ .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}

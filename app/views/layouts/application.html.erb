@@ -4,7 +4,7 @@
     <title>Victoria</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet"> 
 
   <meta charset="utf-8">
@@ -14,13 +14,7 @@
 
   <body>
 
-<%# do not remove yield this is where the layout switches to the page it is in.%>
-
-<div class = "stickyproposal">
-<%# provide ability to donate in a stick navbar here - connect it to the charges/new stripe controller%>
-</div>
-
- <%if notice %>
+<%if notice %>
   <p class= "alert alert_success"><%=notice %> </p>
 <% end %>
 <% if alert %>
@@ -29,13 +23,19 @@
 
 
 <%= render :partial => "layouts/header" %>
+<%= render :partial => 'layouts/donate' %>
 
 
 <%= yield %>
+<%# try <%= yield :header or other yield :methods to make sticky nav display properly %> 
 
 
 <%= render :partial => 'layouts/footer' %>
 <%= render :partial => 'layouts/userpanel'%>
+
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
 
