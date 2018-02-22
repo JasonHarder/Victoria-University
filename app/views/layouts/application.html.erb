@@ -14,81 +14,11 @@
 
   <body>
 
-
-<%# RUBY CODE DO NOT TOUCH - NEEDED FOR DEVISE%>
-
-<%# DO NOT TOUCH CODE RIGHT ABOVE THIS COMMENT IT IS CRITICAL FOR  DEVISE LOGIN -%>
-
-
 <%# do not remove yield this is where the layout switches to the page it is in.%>
 
 <div class = "stickyproposal">
 <%# provide ability to donate in a stick navbar here - connect it to the charges/new stripe controller%>
 </div>
-<nav class="navbar navbar-inverse">
-   <div class="container-fluid" style="background-color:rgb(112, 111, 111);">
-     <div class="navbar-header">
-       <img src="/assets/12a.jpg" width="200" height="100">
-     </div>
-
-     <ul class="nav navbar-nav navbar-right">
-         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/admission">Admission <span class="caret"></span></a>
-           <ul class="dropdown-menu">
-             <li id="abcd"><a href="/admission">Undergrad</a></li>
-           </ul>
-         </li>
-
-               <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/about">About us<span class="caret"></span></a>
-           <ul class="dropdown-menu">
-             <li><a href="/about">Structures</a></li>
-             <li><a href="/about">Management Policies</a></li>
-           </ul>
-         </li>
-
-       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/academic">Academics<span class="caret"></span></a>
-           <ul class="dropdown-menu">
-             <li><a href="/about">Structures</a></li>
-             <li><a href="/about">Management Policies</a></li>
-           </ul>
-         </li>
-
-         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/campus">Campus<span class="caret"></span></a>
-           <ul class="dropdown-menu">
-             <li><a href="/campus">Locations</a></li>
-             <li><a href="/campus">Asthetics</a></li>
-             <li><a href="/campus">Amenities</a>
-             </li>
-           </ul>i
-         </li>
-
-           <li class="dropdown"><a class="dropdown-toggle data-toggle="dropdown" href="/events">Events<span class="caret"></span></a>
-           <ul class="dropdown-menu">
-             <li><a href="/events">Locations</a></li>
-             <li><a href="/events">Asthetics</a></li>
-             <li><a href="/events">Amenities</a>
-             </li>
-           </ul>
-         </li>
-
-
-         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/schools">Schools<span class="caret"></span></a>
-           <ul class="dropdown-menu">
-             <li><a href="/schools">Natural/Applied Sciences</a></li>
-             <li><a href="/schools">Management and Technology</a></li>
-             <li><a href="/schools">Creative arts and Applied Social Sciences</a></li>
-           </ul>
-         </li>
-         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/contact">Contact Us<span class="caret"></span></a>
-           <ul class="dropdown-menu">
-             <li><a href="/contact">Social Media</a></li>
-           </ul>
-         </li>
-       <li><a href="#" class="dropdown-toggle ><span class="glyphicon glyphicon-user"></span> Interested in Vic University?</a></li>
-       <%# above will link to form for people to indicate intrest and send their info below will send to vicrit moogle or w.e%>
-       <li><a href="#" class="dropdown-toggle"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-     </ul>
-   </div>
- </nav>
 
  <%if notice %>
   <p class= "alert alert_success"><%=notice %> </p>
@@ -98,15 +28,13 @@
 <% end %>
 
 
-
-
 <%= render :partial => "layouts/header" %>
 
 
 <%= yield %>
 
 
-<%= render :partial => "layouts/footer" %>
+<%= render :partial => 'layouts/footer' %>
 <%= render :partial => 'layouts/userpanel'%>
 
 
