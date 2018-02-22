@@ -25,16 +25,16 @@
     });
   })();
   
-  window.onscroll = function() {myFunction()};
+  window.onscroll = function() {barStick()};
 
-    var stickyprop = document.querySelector(".stickyproposal");
-    var sticky = stickyprop.offsetTop;
+    var stickyProp = document.querySelector('.stickyproposal');
+    var sticky = stickyProp.offsetTop;
 
-  function myFunction() {
+  function barStick() {
     if (window.pageYOffset >= sticky) {
-      stickyprop.classList.add(".sticky")
+      stickyProp.classList.add("sticky")
     } else {
-      stickyprop.classList.remove(".sticky");
+      stickyProp.classList.remove("sticky");
     }
   }
 });
