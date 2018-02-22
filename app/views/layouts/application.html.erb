@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet"> 
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,27 +28,27 @@
 <nav class="navbar navbar-inverse">
    <div class="container-fluid" style="background-color:rgb(112, 111, 111);">
      <div class="navbar-header">
-       <img src="12a.jpg" width="200" height="100">
+       <img src="/assets/12a.jpg" width="200" height="100">
      </div>
 
      <ul class="nav navbar-nav navbar-right">
-         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/admissions">Admission <span class="caret"></span></a>
+         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/admission">Admission <span class="caret"></span></a>
            <ul class="dropdown-menu">
-             <li id="abcd"><a href="/admissions">Undergrad</a></li>
+             <li id="abcd"><a href="/admission">Undergrad</a></li>
            </ul>
          </li>
 
-               <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/teachers">About us<span class="caret"></span></a>
+               <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/about">About us<span class="caret"></span></a>
            <ul class="dropdown-menu">
-             <li><a href="/teachers">Our Leaders</a></li>
-             <li><a href="/teachers">Our Teachers</a></li>
+             <li><a href="/about">Structures</a></li>
+             <li><a href="/about">Management Policies</a></li>
            </ul>
          </li>
 
-       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/academics">Academics<span class="caret"></span></a>
+       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/academic">Academics<span class="caret"></span></a>
            <ul class="dropdown-menu">
-             <li><a href="/academics">Structures</a></li>
-             <li><a href="/academics">Management Policies</a></li>
+             <li><a href="/about">Structures</a></li>
+             <li><a href="/about">Management Policies</a></li>
            </ul>
          </li>
 
@@ -60,7 +61,7 @@
            </ul>i
          </li>
 
-           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/events">Events<span class="caret"></span></a>
+           <li class="dropdown"><a class="dropdown-toggle data-toggle="dropdown" href="/events">Events<span class="caret"></span></a>
            <ul class="dropdown-menu">
              <li><a href="/events">Locations</a></li>
              <li><a href="/events">Asthetics</a></li>
@@ -77,14 +78,14 @@
              <li><a href="/schools">Creative arts and Applied Social Sciences</a></li>
            </ul>
          </li>
-         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/contacts">Contact Us<span class="caret"></span></a>
+         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/contact">Contact Us<span class="caret"></span></a>
            <ul class="dropdown-menu">
-             <li><a href="/contacts">Social Media</a></li>
+             <li><a href="/contact">Social Media</a></li>
            </ul>
          </li>
-       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Interested in Vic University?</a></li>
+       <li><a href="#" class="dropdown-toggle ><span class="glyphicon glyphicon-user"></span> Interested in Vic University?</a></li>
        <%# above will link to form for people to indicate intrest and send their info below will send to vicrit moogle or w.e%>
-       <li><a href="/users/sign_in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+       <li><a href="#" class="dropdown-toggle"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
      </ul>
    </div>
  </nav>
@@ -95,10 +96,21 @@
 <% if alert %>
   <p class ="alert alert-danger"> <%=alert %> </p>
 <% end %>
+
+
+
+
 <%= render :partial => "layouts/header" %>
+
+
 <%= yield %>
+
+
 <%= render :partial => "layouts/footer" %>
 <%= render :partial => 'layouts/userpanel'%>
+
+
+
 
 </html>
 
