@@ -4,16 +4,15 @@
   <% if @event.errors.any? || @picture.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(@event.errors.count, "error" || @picture.errors.count,"error") %> prohibited
+        <%= pluralize(@event.errors.count, "error") %> prohibited
         this article from being saved:
       </h2>
       <ul>
-        <% @event.errors && @picture.errors.full_messages.each do |msg|%>
+        <% @events.errors.full_messages.each do |msg|%>
           <li> <%= msg %></li>
         <% end %>
       </ul>
     </div>
-  <% end %>
   <p>
     <% if user_signed_in? %>
         <%= form.label :title%><br>
@@ -22,7 +21,7 @@
   </p>
 
   <% if user_signed_in? %>
-    <%=form.label :picture  %><br>
+    <%= form.label :picture  %><br>
   <% end %>
     <%= form.text_area :picture %>
 
@@ -39,7 +38,6 @@
     <% end %>
         <%= form.text_area :body %>
   </p>
-
 
   <p>
   <% if user_signed_in? %>
