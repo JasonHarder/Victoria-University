@@ -1,0 +1,15 @@
+<div class = "admintoolbar">
+    <% if user_signed_in? %>
+        <button type="button" class="btn btn-danger" id= "adlogout">  <%= link_to "Admin Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> </button>
+        <button type = "button" class = "btn-primary">   <%= link_to "About", teachers_path %>  </button>
+        <button type = "button" class = "btn-primary">   <%= link_to "Academics", academics_path %>  </button>
+        <button type = "button" class = "btn-primary">   <%= link_to "Admission", admissions_path %>  </button>
+        <button type = "button" class = "btn-primary">   <%= link_to "Campus", campus_path %>  </button>
+        <button type = "button" class = "btn-primary">   <%= link_to "Events", events_path %>  </button>
+        <button type = "button" class = "btn-primary">   <%= link_to "Schools", schools_path %>  </button>
+        <button type = "button" class = "btn-primary">   <%= link_to "Contact", contacts_path %>  </button>
+        <button type = "button" class = "btn-primary">   <%= link_to "User Controls", root_path %>  </button>
+    <% end %>
+</div>
+
+<%#New Layout structure dictates we do not need the general links in nav now (admin bar does not display over the nav now BUT we STILL )%>
