@@ -3,21 +3,21 @@
 This is written as if you do know HTML/CSS & JS but likely do not know Ruby/Rails.If this is a fellow intern reading that does not have Rails/Ruby in their stack then it was written with you in mind as much as possible.Since every intern I've worked with here does not know Rails/Ruby I am trying to walk you through and include useful resources.
 
 
-#Section 1 also covers possible needed installs.
-1) The Stack & Dependancies Installation
-    A) The Stack.
-    B) Dependancies.
-    C) Database.
-    D) Microsoft Stack? 
-    E) Stuck? 
-2) Making Changes to the Front End
-    A) Editing HTML.
-    B) Editing CSS & JS.
-    C) Important point about making changes to css & JS
-3) Making Changes to the Back End
-    A) Models & Controllers (MVC directory structure in rails).
-    B) Postgres Database.
-4) Deployment Parameters (With AWS Elastic Beanstalk)
+                                    #Section 1 also covers possible needed installs.
+            1) The Stack & Dependancies Installation
+                A) The Stack.
+                B) Dependancies.
+                C) Database.
+                D) Microsoft Stack? 
+                E) Stuck? 
+            2) Making Changes to the Front End
+                A) Editing HTML.
+                B) Editing CSS & JS.
+                C) Important point about making changes to css & JS
+            3) Making Changes to the Back End
+                A) Models & Controllers (MVC directory structure in rails).
+                B) Postgres Database.
+            4) Deployment Parameters (With AWS Elastic Beanstalk)
 
 5) Getting confortable w/Rails
 
@@ -37,24 +37,24 @@ I will be (hopefully) making this guide more comprehensive in the coming weeks b
 
                                                                 B) Dependancies(Gems)
         
-        Specfic gems (or packages in more general terms) used in this project. All listed gems are copied as if it was the original gemfile and a short explaination is given depending on the situation. 
+        Specfic gems (or packages in more general terms) used in this project. All listed gems are copied as if it was the           original gemfile and a short explaination is given depending on the situation. 
 
         gem 'bootstrap-sass', '~> 3.3.6' -> Handles style on the front end.
-        gem 'devise'                     -> Very powerful & useful authentication gem that gives you users and many abilities with them right out of the box.
+        gem 'devise'                     -> Very powerful & useful authentication gem that gives you users and many                                                     abilities with them right out of the box.
         gem 'jquery-rails'               -> required for bootstrap but we did not use Jquery itself as of this doc.
         gem 'stripe'                     -> For the payment system
         gem 'redis', '~> 3.0'            -> Redis handles the datastructure that makes chat work.
-        gem 'pg', '~> 0.20'              -> If you have database issues and cannot rails db: (setup , reset , migrate etc...) ensure you are using pg 0.20 - I had an issue but don't remember 
+        gem 'pg', '~> 0.20'              -> If you have database issues and cannot rails db: (setup , reset , migrate               etc...) ensure you are using pg 0.20 - I had an issue but don't remember 
                                             the specifics.
-        gem "rename"                     -> Not having rename should not cause any issues , I just used it to ensure no issues with renaming the project when I did, early on in development.
+        gem "rename"                     -> Not having rename should not cause any issues , I just used it to ensure no             issues with renaming the project when I did, early on in development.
 
                                                             C) Basic Database information
 
-        The Database is built in postgres , once you have cloned the project (at https://github.com/Anthematics/victoria-university-tester [originally a development repo it became our stable at some point when dev moved fairly far ahead and we started just using branches] (youll need to gem install postgres -probably globally -information about Postgres install is also in the dev_enviroment_setup link outlined above)
+        The Database is built in postgres , once you have cloned the project (at https://github.com/Anthematics/victoria-           university-tester [originally a development repo it became our stable at some point when dev moved fairly far ahead         and we started just using branches] (youll need to gem install postgres -probably globally -information about               Postgres install is also in the dev_enviroment_setup link outlined above)
 
                                                                 D) Microsoft Stack? 
 
-        IF YOU ARE USING WINDOWS - You can install Ruby/Rails/Postgres/Git(and bash)though the installs would be wildly different than what I've worked with (this is assuming you are coming from a non linux based stack as it seems most of Yomi's interns do.The good news is,If you are coming from a microsoft-based stack (ASP.NET, I believe)- Models,Views & Controllers are an essential part of rails - feel free to look in the folders and see the associations yourself.
+        IF YOU ARE USING WINDOWS - You can install Ruby/Rails/Postgres/Git(and bash)though the installs would be wildly             different than what I've worked with (this is assuming you are coming from a non linux based stack as it seems most         of Yomi's interns do.The good news is,If you are coming from a microsoft-based stack (ASP.NET, I believe)-                   Models,Views & Controllers are an essential part of rails - feel free to look in the folders and see the                     associations yourself.
 
 
                                                                     E) Stuck?
@@ -92,19 +92,19 @@ I will be (hopefully) making this guide more comprehensive in the coming weeks b
 
         app/controllers ->
 
-        db/schema.rb -> Changing the schema is done through migrations so lookup migrations with ctrl+f in the section 5 guide.The schema itself describes the SQL tables (which can be accessed with rails c )
+        db/schema.rb -> Changing the schema is done through migrations so lookup migrations with ctrl+f in the section 5             guide.The schema itself describes the SQL tables (which can be accessed with rails c )
 
-        db/migrate -> Refer to this to help you follow any rails conventions that may be needed by looking at previous migrations , it will also show migrations you've written (code is to be written in the change method). 
+        db/migrate -> Refer to this to help you follow any rails conventions that may be needed by looking at previous               migrations , it will also show migrations you've written (code is to be written in the change method). 
 
 
                                                             4) AWS Deployment
 
-        You will need AWS Elastic Beanstalk. AWS docs are better than mine will ever be https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3.html is probably the link you'd need , dig around to ensure you're following instructions for your OS.
+        You will need AWS Elastic Beanstalk. AWS docs are better than mine will ever be                                             https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3.html is probably the link you'd need , dig around to         ensure you're following instructions for your OS.
 
         I will add deployment / configuration docs here when it is fully deployed.
 
                                                         5) Getting confortable w/Rails.
 
-        The guide linked below will teach you all the basics of rails and if you're trying to do something will direct you. This is built with the idea of creating a blog with CRUD capabilities. It is highly recommended if you have not used ruby or rails to go through this guide with a fine tooth comb. There is also a handy guide here that describes the rails structure and "what does what" better than I ever would be able to here.
+        The guide linked below will teach you all the basics of rails and if you're trying to do something will direct you.         This is built with the idea of creating a blog with CRUD capabilities. It is highly recommended if you have not used        ruby or rails to go through this guide with a fine tooth comb. There is also a handy guide here that describes the          rails structure and "what does what" better than I ever would be able to here.
 
                                 http://guides.rubyonrails.org/getting_started.html#creating-the-blog-application
