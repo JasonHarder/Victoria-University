@@ -8,7 +8,6 @@
         <td class = "teacherbody"><%= teacher.body%>  </td>
 
 <%#The below ruby code allows Yomi to add / edit / delete faculty - consider putting it in a custom sticky footer at the bottom so he can just add at any time when the browser is over it %>
-ype="button" class="btn btn-primary"><%= link_to 'Edit', edit_event_path(event)
       <% if user_signed_in? %>
         <div class =".btn-group-xs">
         <td> <button type="button" class="btn btn-primary"><%= link_to 'Show', teacher_path(teacher) %> </button>  </td>

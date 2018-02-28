@@ -1,6 +1,6 @@
 
-<%= form_with model: @event, local: true do |form| %>
-  <%if user_signed_in? %>
+<%= form_with model: @event, local: true do |f| %>
+  <%if user_signed_in?%>
     <% if @event.errors.any? %>
       <div id="error_explanation">
         <h2>
@@ -15,36 +15,39 @@
       </div>
     <% end %>
     <p>
-        <%= form.label :title%><br>
-        <%= form.text_field :title %>
-    </p>
-
-
-    <p>
-        <%= form.label :body %><br>
-        <%= form.text_area :body %>
+        <%= f.label :title%><br>
+        <%= f.text_field :title %>
     </p>
 
     <p>
-          <%= form.label :url %> <br>
-          <%= form.text_field :url %>
+        <%= f.label :body %><br>
+        <%= f.text_area :body %>
     </p>
 
+    <p>
+        <%= f.label :url %> <br>
+        <%= f.text_field :url %>
+    </p>
 
+      <%= f.fields_for :picture do |f| %>
 
-  <p>
-      <% form.fields_for :picture do |form| %>
-          <%= form.label :picture  %><br>
-          <%= form.text_area :picture %>
+      <p>
+        <%= f.label :name  %><br>
+        <%= f.text_field :name %>
+      </p>
 
-
+      <p>
+        <%=f.label :url %>
+        <%=f.text_field :url %>
+      </p>
+<%# /events/:event_id/pictures/new(.:format)           pictures#new %>
       <% end %>
     <% end %>
     </p>
 
     <P>
       <% if user_signed_in? %>
-        <button class = "submit"> <%= form.submit %> </button>
+        <button class = "submit"> <%= f.submit %> </button>
       <% end %>
     </p>
 
