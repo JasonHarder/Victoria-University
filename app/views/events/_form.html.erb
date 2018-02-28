@@ -1,17 +1,17 @@
 
 <%= form_with model: @event, local: true do |f| %>
-  <%if user_signed_in?%>
+  <%if user_signed_in? && current_user.admin?%>
     <% if @event.errors.any? %>
       <div id="error_explanation">
         <h2>
           <%= pluralize(@event.errors.count, "error") %> prohibited
           this article from being saved:
         </h2>
-        <ul>
-          <% @events.errors.full_messages.each do |msg|%>
-            <li> <%= msg %></li>
-          <% end %>
-        </ul>
+          <ul>
+            <% @event.errors.full_messages.each do |msg|%>
+              <li> <%= msg %></li>
+            <% end %>
+          </ul>
       </div>
     <% end %>
     <p>
@@ -40,20 +40,19 @@
         <%=f.label :url %>
         <%=f.text_field :url %>
       </p>
-<%# /events/:event_id/pictures/new(.:format)           pictures#new %>
       <% end %>
-    <% end %>
     </p>
 
     <P>
-      <% if user_signed_in? %>
         <button class = "submit"> <%= f.submit %> </button>
-      <% end %>
-    </p>
-
-    <p>
-      <% unless user_signed_in? %>
-        <h2> 404 NOT FOUND </h2>
-      <% end %>
     </p>
   <% end %>
+
+
+<% end %>
+
+ <p>
+  <% unless user_signed_in? && current_user.admin?%>
+    <h2> 404 NOT FOUND </h2>
+  <% end %>
+</p>
