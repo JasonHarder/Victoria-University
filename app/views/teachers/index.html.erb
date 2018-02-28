@@ -1,17 +1,13 @@
-
-<% if user_signed_in? %>
-  <div class = "teachercreate">
-    <% if user_signed_in? %>
-      <p> <button type="button" class="btn btn-primary"><%= link_to 'New staff member' , new_teacher_path(@teacher)%> </button> </p>
-  </div>
-<% end %>
-
-      <% @teachers.each do |teacher| %>
+<%# This code is whew yomis uploaded teachers go -> I.e The types what he wants and then it automatically gets added to the website-this is the part where the visitor can see it %>
+<%= render :partial => "teachers/teacher_admin_panel" %>
+    <% @teachers.each do |teacher| %>
       <tr>
-        <%# <td class = "teacherpicture"><%=teacher.picture%> </td> #%>
+        <%# <td class = "teacherpicture"><%=teacher.picture%>
         <td class = "teachername"><%= teacher.name%> </td>
         <td class = "teachertitle"><%= teacher.title%> </td>
         <td class = "teacherbody"><%= teacher.body%>  </td>
+
+<%#The below ruby code allows Yomi to add / edit / delete faculty - consider putting it in a custom sticky footer at the bottom so he can just add at any time when the browser is over it %>
 
       <% if user_signed_in? %>
         <div class =".btn-group-xs">
@@ -24,8 +20,7 @@
       </tr>
       <% end %>
     <% end %>
-  <% end %>
-
+<%# if you want to move the add edit delete functionality you would grab the code between this and the comment before it. %>
   <!DOCTYPE html>
   <html>
     <head>
@@ -33,17 +28,17 @@
       <%= csrf_meta_tags %>
       <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-      <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet"> 
+      <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Nanum+Pen+Script" rel="stylesheet"  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   
-  
+
+
     </head>
     <body>
-   
-    
-    
+
+
+
 
 
 
@@ -54,49 +49,50 @@
           <div class="tranbox ">
           <h1 class="headings animated fadeInUp"> VISION</h1>
           <p class="botext animated fadeInDown">To create a path to impact by offering competitive skills for national development and significant global participation.</p>
-         </div>  
-    
+         </div>
+
     </div>
     <div class="col-sm-4 img">
        <img src="assets\vision.JPG" class="img-responsive" >
     </div>
   </div>
   </div>
-   
+
   <div class="container ">
   <div class="row">
-  
+
   <div class="col-sm-4 img ">
   <img src="https://image.freepik.com/free-photo/man-standing-with-a-black-t-shirt_1187-1045.jpg" class="img-responsive ">
   </div>
-  
+
   <div class="col-sm-8">
           <div class="tranbox ">
           <h1 class="headings animated fadeInUp"> STORY</h1>
-             
+
           <p class="botext animated fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora doloremque facere quis, molestias dicta! Quidem ullam, dolore assumenda, iste laborum debitis inventore sequi magnam eos tempore recusandae laudantium dignissimos voluptates.Perferendis illo eius provident rem consequatur, sequi eos nulla sit nihil alias sapiente, dolorum natus laboriosam harum consectetur maxime facilis, ipsam commodi</p>
-          </div>  
+          </div>
   </div>
-  
-  
+
+
   </div>
   </div>
   <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
   <div class="container ">
   <div class="row">
   <div class="col-sm-8">
         <div class="tranbox ">
                    <h1 class="headings animated fadeInUp"> LEADERS</h1>
                     <p class="botext animated fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora doloremque facere quis, molestias dicta! Quidem ullam, dolore assumenda, iste laborum debitis inventore sequi magnam eos tempore recusandae laudantium dignissimos voluptates.Perferendis illo eius provident rem consequatur, sequi eos nulla sit nihil alias sapiente, dolorum natus laboriosam harum consectetur maxime facilis, ipsam commodi</p>
-        </div>  
-  
+        </div>
+
   </div>
   <div class="col-sm-4 img">
      <img src="https://image.freepik.com/free-photo/man-standing-with-a-black-t-shirt_1187-1045.jpg" class="img-responsive" >
   </div>
   </div>
   </div>
-  
+
 
   <br><br><br><br><br><br><br><br><br>
 

@@ -18,18 +18,20 @@
         <%= form.label :title%><br>
     <% end %>
         <%= form.text_field :title %>
+    <%end%>
   </p>
 
-  <% if user_signed_in? %>
-    <%= form.label :picture  %><br>
-  <% end %>
-    <%= form.text_area :picture %>
-
+    <% if user_signed_in? %>
+      <%= form.label :picture  %><br>
+    <% end %>
+      <%= form.text_area :picture %>
+    <% end %>
   <p>
     <% if user_signed_in? %>
         <%= form.label :url %> <br>
     <% end %>
         <%= form.text_field :url %>
+    <% end %>
   </p>
 
   <p>
@@ -37,12 +39,13 @@
         <%= form.label :body %><br>
     <% end %>
         <%= form.text_area :body %>
-  </p>
+    <% end %>
+    </p>
 
   <p>
-  <% if user_signed_in? %>
-    <button class = "submit"> <%= form.submit %> </button>
-  <% end %>
+    <% if user_signed_in? %>
+      <button class = "submit"> <%= form.submit %> </button>
+    <% end %>
   </p>
 
 <% end %>

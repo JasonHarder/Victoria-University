@@ -3,8 +3,8 @@
   <% if @teacher.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(@teacher.errors.count, "error") %> prohibited
-        this article from being saved:
+        <%= pluralize(@teacher.errors.count, "error") %>
+          prohibited this article from being saved:
       </h2>
       <ul>
         <% @teacher.errors.full_messages.each do |msg| %>
@@ -16,28 +16,30 @@
   <p>
     <% if user_signed_in? %>
         <%= form.label :name%><br>
-    <% end %>
         <%= form.text_field :name %>
+    <% end %>
+
   </p>
 
   <p>
     <% if user_signed_in? %>
       <%= form.label :title %> <br>
-    <% end %>
       <%= form.text_field :title %>
+    <% end %>
+
   </p>
 
   <p>
     <% if user_signed_in? %>
       <%= form.label :body %><br>
-    <% end %>
       <%= form.text_area :body %>
+    <% end %>
+
   </p>
 
   <p>
-      <button class = "submit"> Add Staff Member <%= form.submit %> </button>
+    <% if user_signed_in? %>
+      <button class = "submit"><%= form.submit %> </button>
+    <% end %>
   </p>
-
-
-
 <% end %>
