@@ -1,2 +1,8 @@
 <h1>Teachers#update</h1>
 <p>Find me in app/views/teachers/update.html.erb</p>
+
+<p>
+    <% unless user_signed_in? %>
+        <h2> 404 NOT FOUND </h2>
+    <% end %>
+</p>

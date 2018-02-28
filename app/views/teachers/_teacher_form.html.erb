@@ -49,10 +49,15 @@
   <% end %>
   </p>
 
-
   <p>
     <% if user_signed_in? %>
       <button class = "submit"><%= form.submit %> </button>
+    <% end %>
+  </p>
+
+  <p>
+    <% unless user_signed_in? %>
+      <h2> 404 NOT FOUND </h2>
     <% end %>
   </p>
 <% end %>
