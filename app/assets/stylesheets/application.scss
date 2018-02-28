@@ -96,9 +96,15 @@
  .sticky {
   position: fixed;
   top: 0;
-  width: 100%
+  width: 100%;
+  z-index: 1;
 }
 
+.navbar-nav > li > a {
+  padding-top: 40px;
+  padding-bottom: 15px;
+  padding-right: 50px;
+}
 
 
 

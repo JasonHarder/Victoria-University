@@ -32,6 +32,12 @@ div.tranbox {
     padding-top: 200px;
 }
 
+.teamimg{
+    width: 347px;
+    height: 516px;
+    object-fit: fill
+}
+
 
 
 /*   Teacherds  */
@@ -71,6 +77,10 @@ div.tranbox {
 .team-member, .team-member .team-img {
     position: relative;
     width: 70%;
+}
+
+.team-img{
+    height:400px;
 }
 
 .team-hover {
