@@ -18,7 +18,6 @@
         <%= form.label :name%><br>
         <%= form.text_field :name %>
     <% end %>
-
   </p>
 
   <p>
@@ -26,7 +25,6 @@
       <%= form.label :title %> <br>
       <%= form.text_field :title %>
     <% end %>
-
   </p>
 
   <p>
@@ -34,8 +32,23 @@
       <%= form.label :body %><br>
       <%= form.text_area :body %>
     <% end %>
-
   </p>
+
+  <% form.fields_for :picture do |form| %>
+    <% if user_signed_in? %>
+      <%= form.label :picture  %><br>
+      <%= form.text_area :picture %>
+    <% end %>
+
+  <p>
+
+    <% if user_signed_in? %>
+      <%= form.label :url %> <br>
+      <%= form.text_field :url %>
+    <% end %>
+  <% end %>
+  </p>
+
 
   <p>
     <% if user_signed_in? %>
