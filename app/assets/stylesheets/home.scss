@@ -170,7 +170,9 @@ font-size: 50px;
 div.transbox {
 margin: 30px;
 background-color: #ffffff;
-border: 1px solid black;
+border: 1px solid;
+padding: 10px;
+box-shadow: 5px 10px #888888;
 opacity: 0.6;
 filter: alpha(opacity=60); /* For IE8 and earlier */
 }
