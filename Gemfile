@@ -62,4 +62,3 @@ gem 'jquery-rails'
 gem 'stripe'
 
 gem "rename"
-
