@@ -1,4 +1,4 @@
 class Teacher < ApplicationRecord
-  has_many :pictures
-  accepts_nested_attributes_for :pictures, allow_destroy: true
+  has_one :picture
+  accepts_nested_attributes_for :picture, allow_destroy: true
 end

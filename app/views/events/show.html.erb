@@ -17,3 +17,11 @@
 </p>
 
 <%= link_to 'Back', events_path %>
+
+    <p>
+        <% unless user_signed_in? %>
+        <h2> 404 NOT FOUND </h2>
+        <% end %>
+    </p>
+
+<%#<p><%= @post.place.address %>

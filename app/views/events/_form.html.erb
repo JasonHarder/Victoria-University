@@ -1,48 +1,58 @@
 
-<%= form_with model: @event && @picture, local: true do |form| %>
-
-  <% if @event.errors.any? || @picture.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@event.errors.count, "error") %> prohibited
-        this article from being saved:
-      </h2>
-      <ul>
-        <% @events.errors.full_messages.each do |msg|%>
-          <li> <%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <p>
-    <% if user_signed_in? %>
-        <%= form.label :title%><br>
+<%= form_with model: @event, local: true do |f| %>
+  <%if user_signed_in? && current_user.admin?%>
+    <% if @event.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@event.errors.count, "error") %> prohibited
+          this article from being saved:
+        </h2>
+          <ul>
+            <% @event.errors.full_messages.each do |msg|%>
+              <li> <%= msg %></li>
+            <% end %>
+          </ul>
+      </div>
     <% end %>
-        <%= form.text_field :title %>
-  </p>
+    <p>
+        <%= f.label :title%><br>
+        <%= f.text_field :title %>
+    </p>
 
-  <% if user_signed_in? %>
-    <%= form.label :picture  %><br>
+    <p>
+        <%= f.label :body %><br>
+        <%= f.text_area :body %>
+    </p>
+
+    <p>
+        <%= f.label :url %> <br>
+        <%= f.text_field :url %>
+    </p>
+
+      <%= f.fields_for :picture do |f| %>
+
+      <p>
+        <%= f.label :name  %><br>
+        <%= f.text_field :name %>
+      </p>
+
+      <p>
+        <%=f.label :url %>
+        <%=f.text_field :url %>
+      </p>
+      <% end %>
+    </p>
+
+    <P>
+        <button class = "submit"> <%= f.submit %> </button>
+    </p>
   <% end %>
-    <%= form.text_area :picture %>
 
-  <p>
-    <% if user_signed_in? %>
-        <%= form.label :url %> <br>
-    <% end %>
-        <%= form.text_field :url %>
-  </p>
-
-  <p>
-    <% if user_signed_in? %>
-        <%= form.label :body %><br>
-    <% end %>
-        <%= form.text_area :body %>
-  </p>
-
-  <p>
-  <% if user_signed_in? %>
-    <button class = "submit"> <%= form.submit %> </button>
-  <% end %>
-  </p>
 
 <% end %>
+
+ <p>
+  <% unless user_signed_in? && current_user.admin?%>
+    <h2> 404 NOT FOUND </h2>
+  <% end %>
+</p>
