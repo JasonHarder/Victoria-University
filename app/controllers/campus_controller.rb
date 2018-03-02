@@ -1,5 +1,5 @@
 class CampusController < ApplicationController
-  @users = User.all
   def index
+    @users = User.all
   end
 end

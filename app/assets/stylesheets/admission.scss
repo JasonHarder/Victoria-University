@@ -1,12 +1,80 @@
-// Place all the styles related to the admission controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.admissionheader {
-  background: rgba(255, 255, 255, 0.6)
+* {
+  box-sizing: border-box;
 }
 
-.admissionbody {
-  background: rgba(255, 255, 255, 0.6);
-  justify-content: center;
+h2 {
+  color: #DA7B29;
+  font-size: 222%;
+  font-weight: bold;
+  margin-top: 0
+}
+img {
+  max-width: 100%;
+}
+.container {
+  position: relative;
+  max-width: 1200px;
+}
+.content-overlap {
+  background: rgb(245, 244, 239);
+  width: 40%;
+  position: absolute;
+  top: 80px;
+  padding: 60px;
+}
+
+.content-overlap-right {
+  background: rgb(245, 244, 239);
+  width: 40%;
+  position: absolute;
+  bottom: 80px;
+  right : 0px;
+  padding: 60px;
+  
+}
+.content-overlap:before {
+  content: "";
+  border: 2px solid rgba(171, 154, 124, 1.0);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+}
+
+.content-overlap-right:before {
+  content: "";
+  border: 2px solid rgba(171, 154, 124, 1.0);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  
+}
+.image-overlap {
+  width: 70%;
+  float: right;
+}
+
+.image-overlap-left {
+  width: 70%;
+  float: left;
+}
+@media screen and (max-width: 480px) {
+  .content-overlap {
+    position: relative;
+    width: 100%;
+  }
+  .image-overlap {
+    width: 100%;
+  }
+  
+  .content-overlap-right {
+    position: relative;
+    width: 100%;
+  }
+  .image-overlap-right {
+    width: 100%;
+  }
 }

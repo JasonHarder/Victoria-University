@@ -2,22 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{ background-image:linear-gradient(rgba(48, 23, 15, 0.65),
-  rgba(47, 23, 15, 0.65)),
-  url("/assets/bg.jpg") ;
-  background-position: center center;
-  background-repeat:  no-repeat;
-  background-attachment: fixed;
-  background-size:  cover;
-  background-color: #999;
+// body{ background-image:linear-gradient(rgba(48, 23, 15, 0.65),
+//   rgba(47, 23, 15, 0.65)),
+//   url("/assets/bg.jpg") ;
+//   background-position: center center;
+//   background-repeat:  no-repeat;
+//   background-attachment: fixed;
+//   background-size:  cover;
+//   background-color: #999;
 
-}
+// }
 
 .navbar a{
 color:orange;
 }
 
-.col-lg-8{
+.hme{
 padding-top: 30px;
 }
 
@@ -36,10 +36,12 @@ font-size: 20px;
 }
 
 .hoverfont{
+align-content: center;
 font-family: 'Satisfy', cursive;
 font-family: 'Bellefair', serif;
 color: #5aebad;
-font-size: 30px;
+font-size: 20px;
+width: 1000px;
 }
 
 
@@ -168,7 +170,9 @@ font-size: 50px;
 div.transbox {
 margin: 30px;
 background-color: #ffffff;
-border: 1px solid black;
+border: 1px solid;
+padding: 10px;
+box-shadow: 5px 10px #888888;
 opacity: 0.6;
 filter: alpha(opacity=60); /* For IE8 and earlier */
 }

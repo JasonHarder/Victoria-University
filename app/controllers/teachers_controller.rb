@@ -13,42 +13,39 @@ class TeachersController < ApplicationController
   end
 
   def edit
-    @teacher = Teacher.find(params[:id])  end
+    @teacher = Teacher.find(params[:id])
+  end
 
   def create
     @teacher = Teacher.new
-
-    if @teacher.save
-      redirect_to @teacher
-    else
-      render 'new'
-    end
+      if @teacher.save
+        flash[:notice] = "added faculty member"
+          redirect_to @teacher
+      else
+        render 'new'
+      end
   end
 
   def update
     @teacher = Teacher.find(params[:id])
-
-    if @teacher.update(teacher_params)
-      redirect_to @teacher
-    else
-      render 'edit'
-    end
+      if @teacher.update(teacher_params)
+        flash[:notice] = "Successful update"
+        redirect_to @teacher
+      else
+        render 'edit'
+      end
   end
 
   def destroy
     @teacher = Teacher.find(params[:id])
     @teacher.destroy
-
-    redirect_to teachers_path
+      redirect_to teachers_path, notice: "successfully deleted member"
   end
 
   private
-
     def teacher_params
-      params.require(:teacher).permit(:title, :name, :body, :picture)
+      params.require(:teacher).permit(:title, :name, :body, picture_attributes:
+      [:id, :url, :name, :destroy ])
     end
 
-    def picture_params
-      params.require(:picture).permit(:name, :url)
-    end
 end

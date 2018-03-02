@@ -1,6 +1,47 @@
-// Place all the styles related to the about controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+div.tranbox {
+    margin: 30px;
+    background-color: none;
+    
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+  }
+  
+  div.tranbox .botext {
+    margin: 5%;
+    font-weight: normal;
+    color:#424242;
+    font-family: 'opensans';
+    height: 300px;
+    font-size: 30px;
+    
+  
+  }
+
+  .headings{
+      font-family: 'Courier New', Courier, monospace;
+      color: aqua;
+      font-size: 50px;
+  }
+
+
+.vis{
+    padding-top: 400px;
+}
+
+.img{
+    padding-top: 200px;
+}
+
+.teamimg{
+    width: 347px;
+    height: 516px;
+    object-fit: fill
+}
+
+
+
+/*   Teacherds  */
+
 .heading-title {
     margin-bottom: 100px;
 }
@@ -31,10 +72,15 @@
 }
 .team-member {
     overflow: hidden;
+
 }
 .team-member, .team-member .team-img {
     position: relative;
     width: 70%;
+}
+
+.team-img{
+    height:400px;
 }
 
 .team-hover {
@@ -84,9 +130,9 @@
     width: 100%;
     opacity: 0;
     text-align: center;
-    -webkit-transform: translateY(45%);
-    -ms-transform: translateY(45%);
-    transform: translateY(45%);
+    -webkit-transform: translateX(45%);
+    -ms-transform: translateX(45%);
+    transform: translateX(45%); 
     -webkit-transition: all 0.3s 0.2s;
     transition: all 0.3s 0.2s;
     font-size: 35px;
@@ -117,4 +163,18 @@
     text-transform: uppercase;
     color: #a5a5a5;
     letter-spacing: 1px;
+}
+
+.layout{
+        padding-left: 300px;
+        padding-top: 100px;
+        font-family: 'Source Sans Pro', sans-serif;
+        line-height: 1.5;
+        color: #323232;
+        font-size: 15px;
+        font-weight: 400;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+  
 }

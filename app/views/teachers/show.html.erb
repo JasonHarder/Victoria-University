@@ -1,15 +1,9 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/teacher/show.html.erb</p>
-
-
-<p class = "picturebox">
-    <b> picture: </b>
-    <%= @teacher.pictures %>
-</p>
+<h1><%@teacher.name%></h1>
+<p>Find me in app/views/teachers/show.html.erb</p>
 
 <p class = "facultyname">
-    <b> name: </b>
-    <% @teacher.name%>
+    <b> Name: </b>
+    <%= @teacher.name%>
 </p>
 <p class = "titlebox">
     <b> Title:</b>
@@ -17,8 +11,17 @@
 </p>
 
 <p class = 'bodybox'>
-    <b> body: </b>
+    <b> Body: </b>
     <%= @teacher.body %>
 </p>
 
 <%= link_to 'Back', teachers_path %>
+
+    <p>
+        <% unless user_signed_in? %>
+        <h2> 404 NOT FOUND </h2>
+        <% end %>
+    </p>
+
+<%# <%= @post.place.address  %(this is how we see the nested form on the show side.)>
+<render 'products/show' (try this for pics w/a custom id??)>

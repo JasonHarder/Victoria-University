@@ -1,4 +1,4 @@
 class Event < ApplicationRecord
-  has_many :pictures
-  accepts_nested_attributes_for :pictures, allow_destroy: true
+  has_one :event_picture
+  accepts_nested_attributes_for :event_picture
 end

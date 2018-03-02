@@ -14,11 +14,10 @@
     <th colspan="2"></th>
   </tr>
 
-# it may end up looking like <td class "event picture"> <img src - event.picture.url> since its nested
+<%# it may end up looking like <td class "event picture"> <img src - event.picture.url> since its nested %>
     <% @events.each do |event| %>
       <tr>
         <td class = "eventtitle"><%= event.title%> </td>
-        <td class = "eventpicture"> <img src= <%= picture.url %></td>
         <td class = "eventurl"><%= event.url %> </td>
         <td class = "eventbody"><%= event.body%></td>
       </tr>
@@ -27,7 +26,7 @@
       <tr>
         <td> <button type="button" class="btn btn-primary"><%= link_to 'Show', event_path(event) %> </button>  </td>
         <td> <button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_event_path(event) %> </button> </td>
-        <td> <button type="button" class="btn btn-primary"><%= link_to 'Delete',event_path(event),picture_path(picture),
+        <td> <button type="button" class="btn btn-primary"><%= link_to 'Delete',event_path(event),
                       method: :delete,
                       data: { confirm: 'Are you sure?'} %> </button></td>
         </div>
