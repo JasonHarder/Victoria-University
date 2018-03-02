@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
   end
 
   def load_pictures
-  @pictures = Picture.all
+  # @pictures = Picture.all
   end
 
 

@@ -28,21 +28,21 @@
         <%= f.label :url %> <br>
         <%= f.text_field :url %>
     </p>
-
-      <%= f.fields_for :picture do |f| %>
+PICTURE
+      <%= f.fields_for :event_picture, @event.event_picture do |ff| %>
 
       <p>
-        <%= f.label :name  %><br>
-        <%= f.text_field :name %>
+        <%= ff.label :name  %><br>
+        <%= ff.text_field :name %>
       </p>
 
       <p>
-        <%=f.label :url %>
-        <%=f.text_field :url %>
+        <%=ff.label :url %>
+        <%=ff.text_field :url %>
       </p>
       <% end %>
     </p>
-
+END
     <P>
         <button class = "submit"> <%= f.submit %> </button>
     </p>
