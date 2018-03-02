@@ -10,6 +10,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
+    @event.build_event_picture
   end
 
   def edit
@@ -43,7 +44,7 @@ class EventsController < ApplicationController
 
   private
     def event_params
-      params.require(:event).permit(:title, :url, :body, picture_attributes:
+      params.require(:event).permit(:title, :url, :body, event_picture_attributes:
         [:id, :url, :name])
     end
 end
