@@ -8,9 +8,54 @@
     <%= label_tag(:amount, 'Donation Amount:') %>
     <%= text_field_tag(:amount) %>
   </article>
-  <article>
-    <%= hidden_field_tag(:stripeToken) %>
-  </article>
   <button id='donateButton'>Donate</button>
+
+
+
+
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+
+<button id="customButton">Purchase</button>
+
+<script>
+console.log( 'AT THE TOP' );
+
+var handler = StripeCheckout.configure({
+  key: 'pk_test_XvXaEOdYJkcmxoXIa3GzJHRB',
+  image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+  locale: 'auto',
+  token: function(token) {
+    console.log( 'INSIDE TOKEN CALLBACK' );
+    console.log( token );
+    var hiddenField = document.createElement( 'input' );
+    hiddenField.setAttribute( 'type', 'hidden' );
+    hiddenField.setAttribute( 'name', 'stripeToken' );
+    hiddenField.value = token.id;
+
+    document.querySelector( 'form' ).submit();
+
+    // You can access the token ID with `token.id`.
+    // Get the token ID to your server-side code for use.
+  }
+});
+
+document.getElementById('customButton').addEventListener('click', function(e) {
+  console.log( 'CLICKED' );
+  // Open Checkout with further options:
+  handler.open({
+    name: 'Demo Site',
+    description: '2 widgets',
+    currency: 'cad',
+    amount: 2000
+  });
+  e.preventDefault();
+});
+
+// Close Checkout on page navigation:
+window.addEventListener('popstate', function() {
+  handler.close();
+});
+</script>
 <% end %>
-<%#please see assets/javascripts/charges.js and name your elements to connect with the element names there (or change the element names to match yours)>
+
+<!-- see if there is a test card that would submit the payment if the card says yes and goes to the controller and make the event dynamic - that handler.open amount needs to be customized (so we can show the new data in the popup which has to be read from the enviroment -->
