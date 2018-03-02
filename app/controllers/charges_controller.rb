@@ -23,4 +23,8 @@ rescue Stripe::CardError => e
   flash[:error] = e.message
   redirect_to new_charge_path
 end
-end 
+end
+
+# See stripe docs and work with different controller.
+
+#https://stripe.com/docs/recipes/variable-amount-checkout#javascript

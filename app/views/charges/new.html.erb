@@ -11,18 +11,15 @@
 
   <script src="https://checkout.stripe.com/checkout.js"></script>
 
-<button id="customButton">Purchase</button>
+<button id="donateButton">Purchase</button>
 
 <script>
-console.log( 'AT THE TOP' );
-
 var handler = StripeCheckout.configure({
   key: 'pk_test_XvXaEOdYJkcmxoXIa3GzJHRB',
   image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
   locale: 'auto',
+
   token: function(token) {
-    console.log( 'INSIDE TOKEN CALLBACK' );
-    console.log( token );
     var hiddenField = document.createElement( 'input' );
     hiddenField.setAttribute( 'type', 'hidden' );
     hiddenField.setAttribute( 'name', 'stripeToken' );
@@ -35,12 +32,11 @@ var handler = StripeCheckout.configure({
   }
 });
 
-document.getElementById('customButton').addEventListener('click', function(e) {
-  console.log( 'CLICKED' );
+document.getElementById('donateButton').addEventListener('click', function(e) {
   // Open Checkout with further options:
   handler.open({
-    name: 'Demo Site',
-    description: '2 widgets',
+    name: 'Victoria University',
+    description: 'Donation',
     currency: 'cad',
     amount: 2000
   });
