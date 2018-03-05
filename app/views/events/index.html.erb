@@ -1,26 +1,20 @@
-  <% if current_user.try (:admin?) %>
-    <div class = "admincreate">
-        <p> <button type="button" class="btn btn-primary"><%= link_to 'New event' , new_event_path(@events)%>
-            </button>
-        </p>
-    </div>
-  <% end %>
 
-  <% @events.each do |event| %>
-      <tr>
-       <th>Title:</th> <br>
-        <td class = "eventtitle"><%= event.title%> </td>
-       <th>Url:</th><br>
-        <td class = "eventurl"><%= event.url %> </td>
-      <th> Body:</th> <br>
-        <td class = "eventbody"><%= event.body%></td>
-       <th colspan="2"></th> <br>
-      </tr>
-  <% end %>
+<% if user_signed_in? %>
+  <div class = "admincreate">
+    <% if user_signed_in? %>
+      <p> <button type="button" class="btn btn-primary"><%= link_to 'New event' , new_event_path(@events)%> </button> </p>
+  </div>
+<% end %>
+
 
 <%# it may end up looking like <td class "event picture"> <img src - event.picture.url> since its nested %>
-      <% if current_user.try (:admin?) %>
-      <%binding.pry%>
+    <% @events.each do |event| %>
+      <tr>
+        <td class = "eventtitle"><%= event.title%> </td>
+        <td class = "eventurl"><%= event.url %> </td>
+        <td class = "eventbody"><%= event.body%></td>
+      </tr>
+      <% if user_signed_in? %>
         <div class =".btn-group-xs">
       <tr>
         <td> <button type="button" class="btn btn-primary"><%= link_to 'Show', event_path(event) %> </button>  </td>
@@ -31,6 +25,16 @@
         </div>
       </tr>
       <% end %>
+    <% end %>
 </table>
+<% end %>
 
-
+<table>
+<% @events.each do |event| %>
+<tr>
+        <td class = "eventtitle"><%= event.title%> </td>
+        <td class = "eventurl"><%= event.url %> </td>
+        <td class = "eventbody"><%= event.body%></td>
+</tr>
+<%end%>
+</table>
