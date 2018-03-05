@@ -9,11 +9,6 @@
 
 <%# it may end up looking like <td class "event picture"> <img src - event.picture.url> since its nested %>
     <% @events.each do |event| %>
-      <tr>
-        <td class = "eventtitle"><%= event.title%> </td>
-        <td class = "eventurl"><%= event.url %> </td>
-        <td class = "eventbody"><%= event.body%></td>
-      </tr>
       <% if user_signed_in? %>
         <div class =".btn-group-xs">
       <tr>
