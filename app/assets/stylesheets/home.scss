@@ -49,7 +49,7 @@ width: 1000px;
 
 /* ANIMATION 2*/
 
-@mixin fadeText($text-color, $direction : top, $offset : 2em, $transition: 0.5s ease-out) {  
+@mixin fadeText($text-color, $direction : top, $offset : 2em, $transition: 0.5s ease-out) {
 // text-color : dark
 $color: #fff;
 
@@ -79,7 +79,7 @@ position: relative;
 
 &::after {
   background: linear-gradient($deg, transparent, $color $offset) no-repeat $pos center / 100% 100%;
-  
+
   content: '';
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
@@ -89,7 +89,7 @@ position: relative;
 
 &:hover::after {
   @if($direction == 'left' or $direction == 'right') {
-    background-size: 0% 100%;  
+    background-size: 0% 100%;
   } @else {
     background-size: 100% 0%;
   }
@@ -103,7 +103,7 @@ position: relative;
 color: #fff;
 @supports(mix-blend-mode: screen){
    @include fadeText(light, top, 3rem);
-} 
+}
 }
 
 /* Pen styling */
@@ -146,10 +146,10 @@ position: relative;
 @-webkit-keyframes typing { from { width: 0; } }
 @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
 
-.font { 
+.font {
   font: bold 300% Consolas, Monaco, monospace;
   border-right: .1em solid black;
-  width: 16.5em; 
+  width: 16.5em;
   width: 21ch;
   margin: 2em 1em;
   white-space: nowrap;
@@ -185,9 +185,6 @@ font-family: 'Satisfy', cursive;
 font-family: 'Bellefair', serif;
 height: 640px;
 font-size: 30px;
-
-
 }
-
 
 

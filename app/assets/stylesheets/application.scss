@@ -5,32 +5,32 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
- 
- 
+
+
  /*
- 
+
  give the element a class name and its going to have to be adjusted work well.
  only YOMI will see all the users and multiple conversation windows.
- 
+
  li {
  display: inline-block;
  width: 33%;
  }
- 
+
  */
- 
- 
+
+
  ul {
    padding-left: 0px;
    list-style: none;
  }
- 
+
  .messages-list {
    max-height: 200px;
    overflow-y: auto;
    overflow-x: hidden;
  }
- 
+
  .message-sent {
    position: relative;
    background-color: #D9EDF7;
@@ -39,7 +39,7 @@
    padding: 10px;
    float: right;
  }
- 
+
  .message-received {
    background-color: #F1F0F0;
    border-color: #EEEEEE;
@@ -50,36 +50,36 @@
  .logins {
    color: wheat
  }
- 
+
  .admincontrol {
    background-color: black;
    position: fixed;
    top: 0;
    width: 100%;
  }
- 
+
  .admincontrol > .btn-primary > a {
    color: white;
  }
- 
+
  .userpanel {
    width: 20%;
    height: 80%;
    border: 1px solid blue;
  }
- 
+
  .userpanel > .col-md-3 {
    width: 100%;
  }
- 
+
  a.dropdown-toggle{
    color: red;
  }
- 
- .footie { 
+
+ .footie {
    background-color: aliceblue;
  }
- 
+
  .dropdown-toggle {
    font-family: 'Shrikhand', cursive;
    font-color: #fbac13;
@@ -89,7 +89,7 @@
    background-color: wheat;
    text-align: center;
    overflow: hidden;
-   
+
 
  }
 
@@ -111,7 +111,7 @@
 
 /* ALL ANIMATIONS . WILL SHIFT TO A NEW FILE*/
 
- 
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -3595,4 +3595,9 @@
 .slideOutUp {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
+}
+
+.footie {
+  background: black;
+  color: wheat;
 }
