@@ -1,3 +1,16 @@
+  <% @events.each do |event| %>
+      <tr>
+        <td class = "eventtitle"><%= event.title%> </td>
+        <td class = "eventurl"><%= event.url %> </td>
+        <td class = "eventbody"><%= event.body%></td>
+        <%binding.pry%>
+    <% @event_picture.each do |event_pictures|%>
+        <td class = "eventpicname"> <%= event_pictures.name%> </td>
+        <td class = "eventpicurl"> <%= event_pictures.url%> </td>
+  <% end %>
+
+      </tr>
+
 <% if user_signed_in? %>
   <div class = "admincreate">
     <% if user_signed_in? %>
@@ -15,12 +28,7 @@
   </tr>
 
 <%# it may end up looking like <td class "event picture"> <img src - event.picture.url> since its nested %>
-    <% @events.each do |event| %>
-      <tr>
-        <td class = "eventtitle"><%= event.title%> </td>
-        <td class = "eventurl"><%= event.url %> </td>
-        <td class = "eventbody"><%= event.body%></td>
-      </tr>
+<table>
       <% if user_signed_in? %>
         <div class =".btn-group-xs">
       <tr>
