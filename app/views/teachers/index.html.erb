@@ -8,7 +8,7 @@
         <td class = "teacherbody"><%= teacher.body%>  </td>
 
 <%#The below ruby code allows Yomi to add / edit / delete faculty - consider putting it in a custom sticky footer at the bottom so he can just add at any time when the browser is over it %>
-      <% if user_signed_in? %>
+        <% if current_user.try (:admin?) %>
         <div class =".btn-group-xs">
         <td> <button type="button" class="btn btn-primary"><%= link_to 'Show', teacher_path(teacher) %> </button>  </td>
         <td> <button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_teacher_path(teacher) %> </button> </td>
@@ -19,6 +19,14 @@
       </tr>
       <% end %>
     <% end %>
+
+<table>
+  <th> Name: </th>
+  <th> Title: </th>
+  <th> Body: </th>
+  <th colspan="2"> </th>
+</table>
+
 
 <div class="container">
   <div class="content-overlap-right" id="yomibox">
