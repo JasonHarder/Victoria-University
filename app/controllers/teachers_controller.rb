@@ -10,6 +10,7 @@ class TeachersController < ApplicationController
 
   def new
     @teacher = Teacher.new
+    @teacher.build_teacher_picture
   end
 
   def edit
@@ -45,7 +46,7 @@ class TeachersController < ApplicationController
   private
     def teacher_params
       params.require(:teacher).permit(:title, :name, :body, picture_attributes:
-      [:id, :url, :name, :destroy ])
+      [:id, :url, :name])
     end
 
 end

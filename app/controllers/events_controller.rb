@@ -20,6 +20,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
       if @event.save
+          flash[:notice] = "added event!"
         redirect_to @event
       else
         render 'new'
@@ -29,6 +30,7 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
       if @event.update(event_params)
+        flash[:notice] = "Updated event"
       redirect_to @event
     else
       render 'edit'
@@ -39,7 +41,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @event.destroy
 
-    redirect_to events_path
+    redirect_to events_path, notice:"deleted faculty"
   end
 
   private

@@ -3,9 +3,11 @@
     <% @teachers.each do |teacher| %>
       <tr>
         <%# <td class = "teacherpicture"><%=teacher.picture%>
-        <td class = "teachername"><%= teacher.name%> </td>
-        <td class = "teachertitle"><%= teacher.title%> </td>
-        <td class = "teacherbody"><%= teacher.body%>  </td>
+        <td class = "content-overlap-right">
+          <h2 class = "teachername"><%= teacher.name%> </h1>
+          <p class = "teachertitle"><b><%= teacher.title%> </b> </p> </td>
+          <p class = "teacherbody"><%= teacher.body%> </p>
+        </td>
 
 <%#The below ruby code allows Yomi to add / edit / delete faculty - consider putting it in a custom sticky footer at the bottom so he can just add at any time when the browser is over it %>
         <% if current_user.try (:admin?) %>
