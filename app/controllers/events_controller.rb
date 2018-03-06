@@ -41,7 +41,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @event.destroy
 
-    redirect_to events_path, notice:"deleted faculty"
+    redirect_to events_path, notice:"Deleted Event"
   end
 
   private

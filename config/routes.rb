@@ -7,12 +7,12 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: "registrations"}
 
   resources :events, shallow: true do
-    resources :pictures, except: [:index]
+    resources :event_pictures
   end
 
 
   resources :teachers, shallow: true do
-    resources :pictures, except: [:index]
+    resources :teacher_pictures
   end
 
   resources :charges

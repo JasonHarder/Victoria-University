@@ -44,6 +44,6 @@ class PicturesController < ApplicationController
   private
 
   def event_picture_params
-      params.require(:event_picture).permit(:name, :url)
+      params.require(:event_picture).permit(:name, :url , :_delete)
   end
 end

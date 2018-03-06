@@ -29,9 +29,11 @@
 <tr>
         <td class = "content-overlap-right">
         <h1 class = "eventtitle"> <h1><%= event.title%> </h1>
-        <p class = "eventlink"><b> <%= event.url %></b></p>
         <p class = "eventbody"><%= event.body%> </p>
+        <%= image_tag event.event_picture.url %>
         </td>
 </tr>
+  <%= image_tag event.event_picture.url %>
+
 <%end%>
 </table>
