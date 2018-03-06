@@ -27,9 +27,11 @@
 <table>
 <% @events.each do |event| %>
 <tr>
-        <td class = "eventtitle"><%= event.title%> </td>
-        <td class = "eventurl"><%= event.url %> </td>
-        <td class = "eventbody"><%= event.body%></td>
+        <td class = "content-overlap-right">
+        <h1 class = "eventtitle"> <h1><%= event.title%> </h1>
+        <p class = "eventlink"><b> <%= event.url %></b></p>
+        <p class = "eventbody"><%= event.body%> </p>
+        </td>
 </tr>
 <%end%>
 </table>
