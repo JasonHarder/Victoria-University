@@ -26,8 +26,6 @@
 <%end%>
 
 
-<p> ------------------------------------------------------------ </p>
-
 <% @events.each.with_index do |event,index| %>
 
 
@@ -44,18 +42,15 @@
 <br>
 
   <% else %>
-
     <div class="container">
       <div class="content-overlap-right">
         <h1 class = "eventtitle" > <%= event.title %> </h1>
           <p class = "eventbody"> <%= event.body %> </p>
-          </p>
       </div>
     <div class="image-overlap-right">
       <%= image_tag event.event_picture.url %>
+    </div>
   </div>
-</div>
-
-
+<br>
   <% end %>
 <%end %>
