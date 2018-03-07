@@ -13,16 +13,6 @@
 
 
 <% @events.each do |event| %>
-<table>
-    <tr>
-            <div class = "image-overlap">
-                <%= image_tag event.event_picture.url %>
-            </div>
-                <td class = "content-overlap-right">
-                  <h1 class = "eventtitle"> <h1><%= event.title%> </h1>
-                  <p class = "eventbody"><%= event.body%> </p>
-              </td>
-    </tr>
 <% if current_user.try(:admin?) %>
         <div class =".btn-group-xs">
              <button type="button" class="btn btn-primary"><%= link_to 'Show', event_path(event) %> </button>
@@ -35,3 +25,37 @@
 <%end %>
 <%end%>
 
+
+<p> ------------------------------------------------------------ </p>
+
+<% @events.each.with_index do |event,index| %>
+
+
+  <% if index.odd?%>
+    <div class="container">
+      <div class="content-overlap">
+        <h1 class = "eventtitle" > <%= event.title %> </h1>
+          <p class = "eventbody"> <%= event.body %> </p>
+      </div>
+    <div class="image-overlap">
+      <%= image_tag event.event_picture.url %>
+    </div>
+  </div>
+<br>
+
+  <% else %>
+
+    <div class="container">
+      <div class="content-overlap-right">
+        <h1 class = "eventtitle" > <%= event.title %> </h1>
+          <p class = "eventbody"> <%= event.body %> </p>
+          </p>
+      </div>
+    <div class="image-overlap-right">
+      <%= image_tag event.event_picture.url %>
+  </div>
+</div>
+
+
+  <% end %>
+<%end %>
