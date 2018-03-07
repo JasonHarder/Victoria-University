@@ -1,44 +1,35 @@
+  <% if current_user.try(:admin?) %>
+    <div class = "admincreate">
+      <% if user_signed_in? %>
+        <p> <button type="button" class="btn btn-primary"><%= link_to 'New event' , new_event_path(@events)%> </button> </p>
+    </div>
+  <% end %>
+  <% end %>
 
-<% if user_signed_in? %>
-  <div class = "admincreate">
-    <% if user_signed_in? %>
-      <p> <button type="button" class="btn btn-primary"><%= link_to 'New event' , new_event_path(@events)%> </button> </p>
-  </div>
-<% end %>
+<%# TO DO ODD AND EVEN - change @events.each do |event| to @events.each.with_index do |event,index|   %>
+<%# if index.odd  & an else statement should fix the issue %>
 
 
-<%# it may end up looking like <td class "event picture"> <img src - event.picture.url> since its nested %>
-    <% @events.each do |event| %>
-      <% if current_user.try(:admin?) %>
-        </div>
-      <% end %>
-    <% end %>
-<% end %>
-
-<table>
-<% @events.each do |event| %>
-<tr>
+  <% @events.each do |event| %>
+  <table>
+      <tr>
         <div class = "image-overlap">
-            <%= image_tag event.event_picture.url %>
+          <%= image_tag event.event_picture.url %>
         </div>
-            <td class = "content-overlap-right">
-              <h1 class = "eventtitle"> <h1><%= event.title%> </h1>
-              <p class = "eventbody"><%= event.body%> </p>
+          <td class = "content-overlap-right">
+            <h1 class = "eventtitle"> <h1><%= event.title%> </h1>
+            <p class = "eventbody"><%= event.body%> </p>
           </td>
-</tr>
-<% if current_user.try(:admin?) %>
-        <div class =".btn-group-xs">
-             <button type="button" class="btn btn-primary"><%= link_to 'Show', event_path(event) %> </button>
-             <button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_event_path(event) %> </button>
-             <button type="button" class="btn btn-primary"><%= link_to 'Delete',event_path(event),
+
+        <% if current_user.try(:admin?) %>
+          <div class =".btn-group-xs">
+            <button type="button" class="btn btn-primary"><%= link_to 'Show', event_path(event) %> </button>
+            <button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_event_path(event) %> </button>
+            <button type="button" class="btn btn-primary"><%= link_to 'Delete',event_path(event),
                       method: :delete,
                       data: { confirm: 'Are you sure?'} %> </button></td>
-        </div>
-<%end %>
-<tr>
-
-
-</tr>
-
+          </div>
+      </tr>
+  </table>
+  <%end %>
 <%end%>
-</table>
