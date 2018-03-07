@@ -20,11 +20,3 @@ For partnership: <br>
     <img src="assets\administration.jpg"  >
   </div>
 </div>
-
-<div class "adminlogin"> <p>
-  <% if user_signed_in? %>
-    <%= link_to "Admin Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-  <% else %>
-    <%= link_to "Admin Login", new_user_session_path, :class => 'navbar-link' %>
-  <% end %>
-</div>
