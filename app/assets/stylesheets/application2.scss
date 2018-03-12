@@ -168,16 +168,10 @@
     color: wheat;
     bottom: 0;
     width: 100%;
-    position: absolute;
-}
-
-.footie {
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
     padding: 1rem;
-    background-color: black;
-    color:wheat;
     text-align: center;
   }
