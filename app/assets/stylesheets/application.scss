@@ -20,92 +20,6 @@
  */
 
 
- ul {
-   padding-left: 0px;
-   list-style: none;
- }
-
- .messages-list {
-   max-height: 200px;
-   overflow-y: auto;
-   overflow-x: hidden;
- }
-
- .message-sent {
-   position: relative;
-   background-color: #D9EDF7;
-   border-color: #BCE8F1;
-   margin: 5px 20px;
-   padding: 10px;
-   float: right;
- }
-
- .message-received {
-   background-color: #F1F0F0;
-   border-color: #EEEEEE;
-   margin: 5px 20px;
-   padding: 10px;
-   float: left;
- }
- .logins {
-   color: wheat
- }
-
- .admincontrol {
-   background-color: black;
-   position: fixed;
-   top: 0;
-   width: 100%;
- }
-
- .admincontrol > .btn-primary > a {
-   color: white;
- }
-
- .userpanel {
-   width: 20%;
-   height: 80%;
-   border: 1px solid blue;
- }
-
- .userpanel > .col-md-3 {
-   width: 100%;
- }
-
- a.dropdown-toggle{
-   color: red;
- }
-
- .footie {
-   background-color: aliceblue;
- }
-
- .dropdown-toggle {
-   font-family: 'Shrikhand', cursive;
-   font-color: #fbac13;
- }
-
- .stickyproposal {
-   background-color: wheat;
-   text-align: center;
-   overflow: hidden;
-
-
- }
-
- .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-
-.navbar-nav > li > a {
-  padding-top: 40px;
-  padding-bottom: 15px;
-  padding-right: 50px;
-}
-
 
 
 
@@ -3597,7 +3511,3 @@
   animation-name: slideOutUp;
 }
 
-.footie {
-  background: black;
-  color: wheat;
-}

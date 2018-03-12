@@ -15,9 +15,9 @@
 <% @events.each do |event| %>
 <% if current_user.try(:admin?) %>
         <div class =".btn-group-xs">
-             <button type="button" class="btn btn-primary"><%= link_to 'Show', event_path(event) %> </button>
-             <button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_event_path(event) %> </button>
-             <button type="button" class="btn btn-primary"><%= link_to 'Delete',event_path(event),
+            <button type="button" class="btn btn-primary"><%= link_to 'Show', event_path(event) %> </button>
+            <button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_event_path(event) %> </button>
+            <button type="button" class="btn btn-primary"><%= link_to 'Delete',event_path(event),
                       method: :delete,
                       data: { confirm: 'Are you sure?'} %> </button></td>
         </div>
