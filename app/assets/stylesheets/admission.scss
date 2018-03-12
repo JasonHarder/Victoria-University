@@ -1,80 +1,15 @@
-* {
-  box-sizing: border-box;
-}
-
-h2 {
-  color: #DA7B29;
-  font-size: 222%;
-  font-weight: bold;
-  margin-top: 0
-}
-img {
-  max-width: 100%;
-}
-.container {
-  position: relative;
-  max-width: 1200px;
-}
-.content-overlap {
-  background: rgb(245, 244, 239);
-  width: 40%;
-  position: absolute;
-  top: 80px;
-  padding: 60px;
-}
-
-.content-overlap-right {
-  background: rgb(245, 244, 239);
-  width: 40%;
-  position: absolute;
-  bottom: 80px;
-  right : 0px;
-  padding: 60px;
-
-}
-.content-overlap:before {
-  content: "";
-  border: 2px solid rgba(171, 154, 124, 1.0);
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-}
-
-.content-overlap-right:before {
-  content: "";
-  border: 2px solid rgba(171, 154, 124, 1.0);
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-
-}
-.image-overlap {
-  width: 70%;
-  float: right;
-}
-
-.image-overlap-left {
-  width: 70%;
-  float: left;
-}
-@media screen and (max-width: 480px) {
-  .content-overlap {
+.admissionbody {
+    background: rgb(245, 244, 239);
+    width: 90%;
     position: relative;
-    width: 100%;
-  }
-  .image-overlap {
-    width: 100%;
-  }
+    top: 80px;
+    padding: 60px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
-  .content-overlap-right {
-    position: relative;
-    width: 100%;
-  }
-  .image-overlap-right {
-    width: 100%;
-  }
+.reares {
+  justify-content: space-around;
+  margin-left: 25%;
+  margin-right: 25%;
 }
