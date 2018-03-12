@@ -1,6 +1,7 @@
 
 <%= form_with model: @event, local: true do |f| %>
-  <%if user_signed_in? && current_user.admin?%>
+  <% if current_user.try(:admin?) %>
+
     <% if @event.errors.any? %>
       <div id="error_explanation">
         <h2>
@@ -14,6 +15,7 @@
           </ul>
       </div>
     <% end %>
+
     <p>
         <%= f.label :title%><br>
         <%= f.text_field :title %>
