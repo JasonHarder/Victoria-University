@@ -1,7 +1,5 @@
-<br> <br> <br> <br>
 <p class = "footie"> Victoria University 2018 </p>
-
-<% if current_user.try(:admin?) %>
+<% if user_signed_in? %>
   <div class="row">
   <div class="col-md-9">
     <ul id="conversations-list">

@@ -157,21 +157,37 @@
     .content-overlap-right {
       position: relative;
       width: 100%;
-    }
+    };
     .image-overlap-right {
       width: 100%;
     }
   }
 
-.footie {
-    background: black;
-    color: wheat;
-    bottom: 0;
-    width: 100%;
-    position: fixed;
+  .footie {
+    margin-top: 20px;
+    display: flex;
     right: 0;
     bottom: 0;
     left: 0;
     padding: 1rem;
+    background-color: black;
+    color:wheat;
     text-align: center;
   }
+
+  .content-overlap-body {
+    background: rgb(245, 244, 239);;
+    top: 80px;
+    padding: 60px;
+  }
+
+  .content-overlap-body-right {
+    background: rgb(245, 244, 239);
+    bottom: 80px;
+    right : 0px;
+    padding: 60px;
+  }
+
+  .bodytext {
+    color: black;
+    }
