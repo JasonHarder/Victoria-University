@@ -4,6 +4,8 @@ git_source(:github) do |repo_name|
 repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
 "https://github.com/#{repo_name}.git"
 end
+# Declare Ruby version for Heroku
+ruby '2.5.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgres as the database for Active Record as it is also good for production
@@ -62,3 +64,4 @@ gem 'jquery-rails'
 #gem for payment -> may not need depends on whats needed for api access
 gem 'stripe'
 gem "rename"
+
