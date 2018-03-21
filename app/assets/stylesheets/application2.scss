@@ -73,22 +73,23 @@
   }
 
   .sticky {
-   position: fixed;
-   top: 0;
-   width: 100%;
-   z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
  }
 
  .navbar-nav > li > a {
-   padding-top: 40px;
-   padding-bottom: 15px;
-   padding-right: 50px;
-   display: list-item;
-   color: white;
+  padding-top: 40px;
+  padding-bottom: 15px;
+  padding-right: 50px;
+  display: list-item;
+  font-family: 'Shrikhand', cursive;
+  font-color: #fbac13;
  }
 
  .navbar-nav > li {
-   color: white;
+  color: white;
  }
 
 
