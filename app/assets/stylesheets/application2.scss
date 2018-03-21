@@ -60,7 +60,7 @@
 
   .dropdown-toggle {
     font-family: 'Shrikhand', cursive;
-    font-color: #fbac13;
+    font-color: #ff871f;
   }
 
   .stickyproposal {
@@ -78,6 +78,7 @@
   width: 100%;
   z-index: 1;
  }
+// Change the navbar fonts
 
  .navbar-nav > li > a {
   padding-top: 40px;
@@ -85,13 +86,12 @@
   padding-right: 50px;
   display: list-item;
   font-family: 'Shrikhand', cursive;
-  font-color: #fbac13;
  }
 
- .navbar-nav > li {
-  color: white;
- }
-
+//  Change the Navbar color
+ .navbar-inverse .navbar-nav > li > a {
+  color: #fffffa;
+}
 
   h2 {
     color: #DA7B29;
