@@ -1,4 +1,4 @@
-* {
+*{
     box-sizing: border-box;
   }
 
@@ -6,7 +6,7 @@
     padding-left: 0px;
     list-style: none;
   }
-
+// These elements all are for the chat system built with action cable.
   .messages-list {
     max-height: 200px;
     overflow-y: auto;
@@ -54,15 +54,8 @@
     width: 100%;
   }
 
-  a.dropdown-toggle{
-    color: red;
-  }
-
-  .dropdown-toggle {
-    font-family: 'Shrikhand', cursive;
-    font-color: #ff871f;
-  }
-
+// This is for the donate here bar - looking at assets - javascripts
+// you would see that the sticky class is affixed to sticky proposal which makes the element stick once it otherwise would be off screen
   .stickyproposal {
     background-color: #ff871f;
     text-align: center;
@@ -93,6 +86,19 @@
   color: #fffffa;
 }
 
+
+a.dropdown-toggle{
+  color: red;
+}
+
+.dropdown-toggle {
+  font-family: 'Shrikhand', cursive;
+  font-color: #ff871f;
+}
+
+
+
+
   h2 {
     color: #DA7B29;
     font-size: 222%;
@@ -102,10 +108,16 @@
   img {
     max-width: 100%;
   }
+
+
+// containers are bootstrap classes - to follow the bootstrap grid system everything must be in a container.
   .container {
     position: relative;
     max-width: 1200px;
   }
+
+// .content-overlap was created for overlapping text over pictures. there is a codepen available that
+// this was taken from and then I edited it for the content-overlap-body class.
   .content-overlap {
     background: rgb(245, 244, 239);
     width: 40%;
@@ -187,6 +199,7 @@
     color: black;
     }
 
+// Classes for the bootstrap footer go here.
     .footer-bs {
       background-color: #737373;
     padding: 60px 40px;

@@ -2,7 +2,7 @@
  *= require_tree .
  *= require_self
  */
-
+// Required for bootstrap to work - do not touch unless you are removing bootstrap and ready to recode the website!.
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
@@ -25,6 +25,8 @@
 
 /* ALL ANIMATIONS . WILL SHIFT TO A NEW FILE*/
 
+
+// Most of this code is written / copied and pasted by Karthik - Not sure what to touch here so I am leaving it as it seems to contain mainly transitions and animations (etc)
 
 .animated {
   -webkit-animation-duration: 1s;
