@@ -40,11 +40,18 @@
         <a class="nav-link" href="/contacts"><b>Contact us </b> </a>
       </li>
 
+<%# if user not signed in allow them to sign up / login %>
+    <% if user_signed_in? %>
       <li class="nav-item">
         <a class="nav-link" href="/users/sign_in"> <b>Sign up or login</b></a>
       </li>
+    <% end %>
+<%# if user is signed in allow them to logout %>
 
-
+       <% if user_signed_in? %>
+       <li class="nav-item">
+               <a class ="nav-link">  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> </a>
+      <% end %>
     </ul>
   </div>
 </nav>

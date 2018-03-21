@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
   <div class = "teachercreate">
-      <% if user_signed_in? %>
+      <% if current_user.try(:admin?) %>
         <p> <button type="button" class="btn btn-primary"><%= link_to 'New staff member' , new_teacher_path(@teacher)%> </button> </p>
       <% end %>
   </div>

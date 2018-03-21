@@ -1,7 +1,5 @@
 <% if current_user.try(:admin?) %>
     <div class = "admintoolbar">
-
-        <button type="button" class="btn btn-danger" id= "adlogout">  <%= link_to "Admin Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> </button>
         <button type = "button" class = "btn-primary">   <%= link_to "Edit Implimentation team", teachers_path %>  </button>
         <button type = "button" class = "btn-primary">   <%= link_to "Add an Event", events_path %>  </button>
         <button type = "button" class = "btn-primary">   <%= link_to "User Controls", root_path %>  </button>
