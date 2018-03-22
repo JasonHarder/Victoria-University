@@ -35,10 +35,14 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="/schools">Schools
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="/schools">School of Natural and Applied Sciences</a></li>
-          <li><a href="/schools">School of Management and Technology</a></li>
-          <li><a href="/schools">School of Creative Arts and Applied Social Sciences</a></li>
+          <li><a href="/naturalappliedsci">School of Natural and Applied Sciences</a></li>
+          <li><a href="/mgmttech">School of Management and Technology</a></li>
+          <li><a href="/creativeartss">School of Creative Arts and Applied Social Sciences</a></li>
         </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/investors"> Investor Relations </a>
       </li>
 
       <li class="nav-item">
@@ -51,9 +55,11 @@
       <% if !user_signed_in? %>
         <a class="nav-link" href="/users/sign_in"> <b>Sign up or login</b></a>
       <% else %>
-        <a class ="nav-link">  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> </a>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
       <% end %>
     </li>
+
+<%# find out how to make a html class work in rails %>
 
     </ul>
   </div>

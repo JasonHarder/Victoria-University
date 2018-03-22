@@ -1,0 +1,2 @@
+module MgmttechHelper
+end
