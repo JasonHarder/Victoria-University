@@ -31,27 +31,31 @@
         <a class="nav-link" href="/events"><b>Events</b></a>
       </li>
 <%# there is a chance this dropdown is not working as it is (nav item dropdown i.e it thinks its a subtab - must check) %>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <b>Schools</b>
-        </a>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Schools
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">School of Natural and Applied Sciences</a></li>
+          <li><a href="#">School of Management and Technology</a></li>
+          <li><a href="#">School of Creative Arts and Applied Social Sciences</a></li>
+        </ul>
+      </li>
 
       <li class="nav-item">
         <a class="nav-link" href="/contacts"><b>Contact us </b> </a>
       </li>
 
 <%# if user not signed in allow them to sign up / login %>
-    <% if user_signed_in? %>
-      <li class="nav-item">
-        <a class="nav-link" href="/users/sign_in"> <b>Sign up or login</b></a>
-      </li>
-    <% end %>
-<%# if user is signed in allow them to logout %>
 
-       <% if user_signed_in? %>
-       <li class="nav-item">
-               <a class ="nav-link">  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> </a>
+    <li class="nav-item">
+      <% if !user_signed_in? %>
+        <a class="nav-link" href="/users/sign_in"> <b>Sign up or login</b></a>
+      <% else %>
+        <a class ="nav-link">  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> </a>
       <% end %>
+    </li>
+
     </ul>
   </div>
 </nav>
+
