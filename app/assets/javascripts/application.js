@@ -5,7 +5,7 @@
 
 
   document.addEventListener("DOMContentLoaded", function(event) {
-    console.log("layout DOM fully loaded and parsed");
+    console.log('layout DOM fully loaded and parsed');
 
 
 
