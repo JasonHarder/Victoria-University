@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'overview/index'
+
   get 'naturalappliedsci/index'
 
   get 'mgmttech/index'

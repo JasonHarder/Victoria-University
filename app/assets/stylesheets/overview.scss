@@ -1,0 +1,200 @@
+// Place all the styles related to the overview controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// body{ background-image:linear-gradient(rgba(48, 23, 15, 0.65),
+//   rgba(47, 23, 15, 0.65)),
+//   url("/assets/bg.jpg") ;
+//   background-position: center center;
+//   background-repeat:  no-repeat;
+//   background-attachment: fixed;
+//   background-size:  cover;
+//   background-color: #999;
+
+// }
+
+.emptyhome2{
+  margin-top: 50px;
+}
+
+.emptyhome{
+  margin-top: 20px;
+
+}
+
+.navbar a{
+color:orange;
+}
+
+.hme{
+padding-top: 30px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.font{
+font-family: 'Bellefair', serif;
+color: RGB(252, 219, 210);
+font-size: 20px;
+}
+
+.hoverfont{
+align-content: center;
+font-family: 'Satisfy', cursive;
+font-family: 'Bellefair', serif;
+color: #5aebad;
+font-size: 20px;
+width: 1000px;
+}
+
+
+
+
+/* ANIMATION 2*/
+
+@mixin fadeText($text-color, $direction : top, $offset : 2em, $transition: 0.5s ease-out) {
+// text-color : dark
+$color: #fff;
+
+// direction : top
+$deg: 180deg;
+$pos: bottom;
+
+@if($text-color == 'light') {
+  $color: #000;
+  mix-blend-mode: screen;
+} @else {
+  mix-blend-mode: multiply;
+}
+
+@if($direction == 'left') {
+  $deg: 90deg;
+  $pos: right;
+} @elseif ($direction == 'right') {
+  $deg: -90deg;
+  $pos: left;
+} @elseif ($direction == 'bottom') {
+  $deg: 0deg;
+  $pos: top;
+}
+
+position: relative;
+
+&::after {
+  background: linear-gradient($deg, transparent, $color $offset) no-repeat $pos center / 100% 100%;
+
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  pointer-events: none;
+  transition: $transition;
+}
+
+&:hover::after {
+  @if($direction == 'left' or $direction == 'right') {
+    background-size: 0% 100%;
+  } @else {
+    background-size: 100% 0%;
+  }
+}
+
+}
+
+// Your text color should have good contrast (either very light or very dark, with the appropriate option passed above) or the entire block will start turning transparent
+
+.hoverfont{
+color: #fff;
+@supports(mix-blend-mode: screen){
+   @include fadeText(light, top, 3rem);
+}
+}
+
+/* Pen styling */
+// This was on <body> but then it mysteriously broke on Chrome
+.wrapper {
+background: #222 url("/assets/homebg.jpg") 50% 50% / cover;
+display: flex;
+align-items: center;
+font: 18px/1.5 'Roboto', sans-serif;
+justify-content: center;
+min-height: 100vh;
+position: relative;
+
+&::before {
+  background: #222;
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  opacity: 0.5;
+}
+}
+
+h1 {
+font-size: 32px;
+font-weight: 300;
+}
+
+.content {
+color: #fff;
+max-width: 600px;
+text-align: center;
+position: relative;
+}
+
+/*anim 3*/
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+.font {
+  font: bold 300% Consolas, Monaco, monospace;
+  border-right: .1em solid black;
+  width: 16.5em;
+  width: 21ch;
+  margin: 2em 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: typing 2s steps(21, end),
+             blink-caret .5s step-end infinite alternate;
+}
+
+.parag{
+padding-top: 20px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color: antiquewhite;
+font-size: 50px;
+}
+
+
+
+div.transbox {
+margin: 30px;
+background-color: #ffffff;
+border: 1px solid;
+padding: 10px;
+box-shadow: 5px 10px #888888;
+opacity: 0.6;
+filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transbox p {
+margin: 5%;
+font-weight: normal;
+color: #545454;
+font-family: 'Satisfy', cursive;
+font-family: 'Bellefair', serif;
+height: 640px;
+font-size: 30px;
+}
+
+
