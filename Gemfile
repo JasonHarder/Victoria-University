@@ -64,4 +64,6 @@ gem 'jquery-rails'
 #gem for payment -> may not need depends on whats needed for api access
 gem 'stripe'
 gem "rename"
+# allows for admin panel.
+gem 'activeadmin'
 
