@@ -1,50 +1,43 @@
 <div class="panels">
-  <div class="panel panel1 overview column ">
-    <p class = 'panel_text'>Learn about our vision for Nigeria's future</p>
+  <div class="panel panel1 overview column-flex ">
     <p class = 'panel_text'>Our Organization</p>
-    <p class = 'panel_text'>About Victoria U</p>
+    <p class = 'panel_text'>Learn&nbsp<%= link_to "Here", overview_index_path %>&nbspabout our mission and our vision</p>
   </div>
-  <div class="panel panel2 admission column">
-    <p class = 'panel_text'>Become part of our story </p>
+  <div class="panel panel2 admission column-flex">
     <p class = 'panel_text'>Admission</p>
-    <p class = 'panel_text'>Our Admission Policy</p>
+    <p class = 'panel_text'>Learn&nbsp<%= link_to "Here",admissions_path %>&nbspabout our admission requirements</p>
   </div>
-  <div class="panel panel3 about column">
-    <p class = 'panel_text'>Meet</p>
-    <p class = 'panel_text'>the implimentation team</p>
-    <p class = 'panel_text'>behind the project</p>
+  <div class="panel panel3 about column-flex">
+    <p class = 'panel_text'>About Us </p>
+    <p class = 'panel_text'>go&nbsp<%= link_to "Here",teachers_path %>&nbspto meet our implimentation team</p></p>
   </div>
-  <div class="panel panel4 academics column">
-    <p class="panel_text"> Acheivement & </p>
+  <div class="panel panel4 academics column-flex">
     <p class="panel_text"> Academics </p>
-    <p class='panel_text' > at Victoria University</p>
+    <p class='panel_text' > Learn how you can acheive at Victoria University</p>
   </div>
 
-  <div class="panel panel5 campus column">
-    <p class = 'panel_text'>Our Beautiful</p>
+  <div class="panel panel5 campus column-flex">
     <p class = 'panel_text'>Campus </p>
-    <p class = "panel_text">in Ekiti, Nigeria </p>
+    <p class = "panel_text">See our beautiful campus </p>
   </div>
 
-  <div class = "panel panel6 events column">
-    <p class = 'panel_text'> code will display latest event headline </p>
+  <div class = "panel panel6 events column-flex">
     <p class = 'panel_text'> Events </p>
-    <p class = 'panel_text'> code will display latest event link </p>
+    <p class = 'panel_text'> Code will display latest event link </p>
   </div>
 
 <%# maybe instead we can change it to having  %>
 <%# School of Creative Arts & Applied Social Sciences in the panel text where our schools is once clicked %>
 <%# maybe use content css %>
-  <div class = "panel panel7 schools column">
-    <p class = 'panel_text'> School of Natural & Applied Sciences </p>
+  <div class = "panel panel7 schools column-flex">
     <p class = 'panel_text'> Our Schools </p>
-    <p class = 'panel_text'> School of Management & Technology <br>
+    <%= link_to "Home", root_path %>
   </div>
 
-  <div class = "panel panel8 contact column">
-    <p class = 'panel_text'> General Inquiry</p>
-    <p class = 'panel_text'>Contact Us </p>
-    <p class = 'panel_text' >Investor Relations <br>
+  <div class = "panel panel8 contact column-flex">
+    <p class = 'panel_text'> Be part of greatness. Be part of a knowledge-driven economy. Be part of “developed” Nigeria. </p>
+    <p class = 'panel_text'> Contact Us </p>
+    <p class = 'panel_text' >Investor Relations / general inquiry <br>
     </p>
   </div>
 </div>

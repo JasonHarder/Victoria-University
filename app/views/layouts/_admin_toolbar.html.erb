@@ -1,11 +1,1 @@
-<% if current_user.try(:admin?) %>
-    <div class = "admintoolbar">
-        <button type = "button" class = "btn-primary">   <%= link_to "Edit Implimentation team", teachers_path %>  </button>
-        <button type = "button" class = "btn-primary">   <%= link_to "Add an Event", events_path %>  </button>
-        <button type = "button" class = "btn-primary">   <%= link_to "User Controls", root_path %>  </button>
-        <button type = "button" class = "btn-primary">   <%= link_to "placeholder", root_path %>  </button>
-        <button type = "button" class = "btn-primary">   <%= link_to "Documentation&Source", root_path %>  </button>
-        <% end %>
-    </div>
-
 <%#New Layout structure dictates we do not need the general links in nav now (admin bar does not display over the nav now BUT we STILL )%>

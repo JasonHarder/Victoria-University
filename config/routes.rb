@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   resources :teachers, shallow: true do
     resources :teacher_pictures
   end
-
+  resources :overview, only: [:index]
   resources :charges
   resources :naturalappliedsci, only: [:index]
   resources :creativeappliedss, only: [:index]
