@@ -6,6 +6,10 @@
     padding-left: 0px;
     list-style: none;
   }
+
+  .img-circle:nth-child(even) {
+    margin-left: -20%;
+  }
 // These elements all are for the chat system built with action cable.
   .messages-list {
     max-height: 200px;
@@ -97,7 +101,12 @@
     margin-top: 0
   }
   img {
-    max-width: 75%;
+    max-width: 600px;
+  }
+
+  .image-overlap-right {
+    width: 100%;
+    margin-left: -20%;
   }
 
 
@@ -158,18 +167,29 @@
   @media screen and (max-width: 480px) {
     .content-overlap {
       position: relative;
-      width: 100%;
+      width: 90%;
+      margin-left: 5%;
     }
     .image-overlap {
       width: 100%;
+      margin-bottom: 10vh;
+      margin-top: 21vh;
     }
 
+  img.img-circle {
+      justify-content: left;
+      display: flex;
+      float: left;
+      max-width: 50%;
+  }
     .content-overlap-right {
       position: relative;
       width: 100%;
     };
+
     .image-overlap-right {
       width: 100%;
+      margin-left: 25%;
     }
   }
 

@@ -21,7 +21,7 @@ body {
 }
 
 // the even selector will affect all text on the bottom when the flex element is selected.
-.panel_text:nth-child(even) {
+.panel_text:first-child {
   background:rgba(255,255,255, 0.5);
   display: flex;
 }
@@ -32,9 +32,14 @@ body {
 // the odd selector will affect all text on the top when the flex element is selected
 //  & the clear panel that it is before it is clicked
 
-.panel_text:nth-child(odd) {
+.panel_text:nth-child(2) {
   background:rgba(255,255,255, 0.5);
   display: flex;
+}
+
+.panel_text:last-child {
+  background:rgba(255,255,255, 0.5);
+  display: flex
 }
 
 
@@ -90,10 +95,11 @@ body {
 }
 
 // Allows bottom and top panel to come down for words to join when the panel is clicked
-.panel > *:first-child {transform: translateY(0);}
-.panel.open-active > *:first-child {transform: translateY(-100%);}
+.panel > *:first-child {transform: translateY(-100%);}
+.panel.open-active > *:first-child {transform: translateY(0);}
 .panel > *:last-child {transform: translateY(100%);}
 .panel.open-active > *:last-child {transform: translateY(0);}
+
 .panel p {
   text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
   font-size: 1em;
