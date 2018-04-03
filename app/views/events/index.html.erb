@@ -9,9 +9,6 @@
 <%# TO DO ODD AND EVEN - change @events.each do |event| to @events.each.with_index do |event,index|   %>
 <%# if index.odd  & an else statement should fix the issue %>
 
-
-
-
 <% @events.each do |event| %>
 <% if current_user.try(:admin?) %>
         <div class =".btn-group-xs">

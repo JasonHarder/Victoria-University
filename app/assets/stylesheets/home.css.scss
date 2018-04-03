@@ -5,6 +5,8 @@ html {
   font-size: 20px;
   font-weight: 200;
 }
+
+
 body {
   margin: 0;
 }
@@ -21,27 +23,21 @@ body {
 }
 
 // the even selector will affect all text on the bottom when the flex element is selected.
-.panel_text:first-child {
-  background:rgba(255,255,255, 0.5);
+.panel_text {
+  background:rgba(34,139,34, 0.5);
   display: flex;
+  color: white;
 }
 
-.panel_text:nth-child(even) > a {
+a.panel_text {
   text-decoration: none;
+  color: white;
 }
+
+
+
 // the odd selector will affect all text on the top when the flex element is selected
 //  & the clear panel that it is before it is clicked
-
-.panel_text:nth-child(2) {
-  background:rgba(255,255,255, 0.5);
-  display: flex;
-}
-
-.panel_text:last-child {
-  background:rgba(255,255,255, 0.5);
-  display: flex
-}
-
 
 .panel {
   background:rgba(255,255,255, 0);
@@ -95,8 +91,8 @@ body {
 }
 
 // Allows bottom and top panel to come down for words to join when the panel is clicked
-.panel > *:first-child {transform: translateY(-100%);}
-.panel.open-active > *:first-child {transform: translateY(0);}
+.panel > *:first-child {transform: translateY(0);}
+.panel.open-active > *:first-child {transform: translateY(-100%);}
 .panel > *:last-child {transform: translateY(100%);}
 .panel.open-active > *:last-child {transform: translateY(0);}
 
@@ -116,4 +112,42 @@ body {
 
 .header_panel {
   flex-direction: row;
+}
+
+
+@media screen and (max-width: 480px) {
+
+
+.panel {
+  background:rgba(255,255,255, 0);
+  box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
+  color: black;
+  text-align: center;
+  align-items:center;
+  /* Safari transitionend event.propertyName === flex */
+  /* Chrome + FF transitionend event.propertyName === flex-grow */
+  // this i think is the part i have to figure out to make a smaller font when the element is clicked
+  font-size: 15px;
+  background-size:cover;
+  background-position:center;
+  flex: 1;
+  justify-content: center;
+  display: flex;
+}
+
+.column-flex {
+  flex-direction: row;
+  display: flex;
+  transition:
+  font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+  flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+  background 0.2s;
+}
+
+.row-flex {
+  flex-direction: row;
+  flex: 0.7s
+}
+
+
 }

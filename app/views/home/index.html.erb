@@ -1,29 +1,30 @@
-<div class="panels">
-  <div class="panel panel1 overview column-flex ">
+<div class ="panels">
+  <div class ="panel panel1 overview column-flex ">
     <p class = 'panel_text'>Our Organization</p>
-    <p class = 'panel_text'>Learn&nbsp<%= link_to "Here", overview_index_path %>&nbspabout our mission and our vision</p>
+      <%= link_to "Our mission & vision", overview_index_path, :class => 'panel_text' %>
   </div>
-  <div class="panel panel2 admission column-flex">
+  <div class ="panel panel2 admission column-flex">
     <p class = 'panel_text'>Admission</p>
-    <p class = 'panel_text'>Learn&nbsp<%= link_to "Here",admissions_path %>&nbspabout our admission requirements</p>
+      <%= link_to "Our admission requirements",admissions_path, :class => 'panel_text' %>
   </div>
-  <div class="panel panel3 about column-flex">
+  <div class = "panel panel3 about column-flex">
     <p class = 'panel_text'>About Us </p>
-    <p class = 'panel_text'>go&nbsp<%= link_to "Here",teachers_path %>&nbspto meet our implimentation team</p>
-  </div>
-  <div class="panel panel4 academics column-flex">
-    <p class="panel_text"> Academics </p>
-    <p class='panel_text' > Learn how you can acheive at Victoria University</p>
+      <%= link_to "Our implimentation team",teachers_path, :class => 'panel_text'  %>
   </div>
 
-  <div class="panel panel5 campus column-flex">
-    <p class = 'panel_text'>Campus </p>
-    <p class = "panel_text">See our beautiful campus </p>
+  <div class = "panel panel4 academics column-flex">
+    <p class = "panel_text"> Academics </p>
+      <%= link_to "Academics at Victoria University", academics_path, :class => 'panel_text' %>
+  </div>
+
+  <div class = "panel panel5 campus column-flex">
+    <p class = 'panel_text'> Campus </p>
+      <%= link_to "Victoria University Campus", campus_path, :class => 'panel_text'%>
   </div>
 
   <div class = "panel panel6 events column-flex">
     <p class = 'panel_text'> Events </p>
-    <p class = 'panel_text'> Code will display latest event link </p>
+      <%= link_to "Events at Victoria University",events_path, :class => 'panel_text'%>
   </div>
 
 <%# maybe instead we can change it to having  %>
@@ -31,12 +32,13 @@
 <%# maybe use content css %>
   <div class = "panel panel7 schools column-flex">
     <p class = 'panel_text'> Our Schools </p>
-    <%= link_to "Home", root_path %>
+      <%= link_to "Our Schools", creativeappliedss_index_path, :class => 'panel_text'%>
   </div>
 
   <div class = "panel panel8 contact column-flex">
-    <p class = 'panel_text'> Be part of greatness. Be part of a knowledge-driven economy. Be part of “developed” Nigeria. </p>
-    <p class = 'panel_text' >Investor Relations /General Inquiry <br>
+    <p class = 'panel_text'> </p>
+
+      <%= link_to " Be part of greatness. Be part of a knowledge-driven economy. Be part of “developed” Nigeria.",contacts_path, :class => 'panel_text'%>
     </p>
   </div>
 </div>
