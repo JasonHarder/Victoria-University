@@ -4,31 +4,26 @@ div.tranbox {
 
     opacity: 0.6;
     filter: alpha(opacity=60); /* For IE8 and earlier */
-  }
+}
 
-  div.tranbox .botext {
+div.tranbox .botext {
     margin: 5%;
     font-weight: normal;
     color:#424242;
     font-family: 'opensans';
     height: 300px;
     font-size: 30px;
-  }
+}
 
-  .headings{
-      font-family: 'Courier New', Courier, monospace;
-      color: aqua;
-      font-size: 50px;
-  }
+.headings{
+    font-family: 'Courier New', Courier, monospace;
+    color: aqua;
+    font-size: 50px;
+}
 
 
 .vis{
     padding-top: 400px;
-}
-
-img {
-    max-width: 400px;
-    margin-top: 3vh;
 }
 
 .teamimg{
