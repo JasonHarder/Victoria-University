@@ -1,11 +1,9 @@
 html {
   box-sizing: border-box;
-  background:#ffc600;
   font-family:'helvetica neue';
-  font-size: 20px;
+  font-size: 50px;
   font-weight: 200;
 }
-
 
 body {
   margin: 0;
@@ -22,14 +20,14 @@ body {
   display: flex;
 }
 
-// the even selector will affect all text on the bottom when the flex element is selected.
-.panel_text {
-  background:rgba(34,139,34, 0.5);
+p.panel_text {
+  background:rgba(150,150,150, 0.5);
   display: flex;
   color: white;
 }
 
 a.panel_text {
+  background:rgba(150,150,150, 0.5);
   text-decoration: none;
   color: white;
 }
