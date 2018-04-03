@@ -178,32 +178,40 @@
     margin-right: -30%;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 700px) {
+
     .content-overlap {
       position: relative;
       width: 90%;
       margin-left: 5%;
     }
-    .image-overlap {
-      width: 100%;
-      margin-bottom: 10vh;
-      margin-top: 21vh;
+
+    .content-overlap:first-child {
+      margin-top: 30vh;
     }
+
+    .image-overlap {
+      right: 10px;
+      margin: -100px;
+      margin-bottom: 5vh;
+  }
+
+  .image-overlap-right {
+
+  }
+
 
 img.img-circle {
       justify-content: left;
       display: flex;
       float: left;
-      max-width: 40%;
-
+      max-width: 90%;
+      max-width: 370px;
+      margin-left: -100px;
 }
-.sized {
-  max-width: 400px;
-}
-
-
-
-
+    .sized {
+      max-width: 400px;
+    }
     .content-overlap-right {
       position: relative;
       width: 100%;
