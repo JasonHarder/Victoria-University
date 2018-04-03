@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box;
   font-family:'helvetica neue';
-  font-size: 50px;
   font-weight: 200;
 }
 
@@ -46,7 +45,6 @@ a.panel_text {
   /* Safari transitionend event.propertyName === flex */
   /* Chrome + FF transitionend event.propertyName === flex-grow */
   // this i think is the part i have to figure out to make a smaller font when the element is clicked
-  font-size: 15px;
   background-size:cover;
   background-position:center;
   flex: 1;
@@ -96,11 +94,8 @@ a.panel_text {
 
 .panel p {
   text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-  font-size: 1em;
 }
-.panel p:nth-child(2) {
-  font-size: 1em;
-}
+
 
 // adjust font size when a panel is clicked.
 .panel.open {
@@ -125,12 +120,16 @@ a.panel_text {
   /* Safari transitionend event.propertyName === flex */
   /* Chrome + FF transitionend event.propertyName === flex-grow */
   // this i think is the part i have to figure out to make a smaller font when the element is clicked
-  font-size: 15px;
   background-size:cover;
   background-position:center;
   flex: 1;
   justify-content: center;
   display: flex;
+  font-size: 3em;
+}
+
+p.panel_text {
+  font-size: -webkit-xxx-large;
 }
 
 .column-flex {
