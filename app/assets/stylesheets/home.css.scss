@@ -11,12 +11,13 @@ body {
   box-sizing: inherit;
 }
 .panels {
+  justify-content: center;
   min-height:70vh;
   max-height:70vh;
-  max-width: 100vw;
-  min-width: 100vw;
   overflow: hidden;
   display: flex;
+  background-color: #737373;
+
 }
 
 p.panel_text {
@@ -25,13 +26,23 @@ p.panel_text {
   color: white;
 }
 
+p.panel_text:first-child {
+  font-size: 4vh;
+}
+
+.panel.panel1.overview.column-flex {
+  margin-left: 1%;
+}
+
+.panel.panel8.contact.column-flex {
+  margin-right: 1%;
+}
+
 a.panel_text {
   background:rgba(150,150,150, 0.5);
   text-decoration: none;
   color: white;
 }
-
-
 
 // the odd selector will affect all text on the top when the flex element is selected
 //  & the clear panel that it is before it is clicked
@@ -87,10 +98,46 @@ a.panel_text {
 }
 
 // Allows bottom and top panel to come down for words to join when the panel is clicked
-.panel > *:first-child {transform: translateY(0);}
-.panel.open-active > *:first-child {transform: translateY(-100%);}
-.panel > *:last-child {transform: translateY(100%);}
-.panel.open-active > *:last-child {transform: translateY(0);}
+.panel > *:first-child {
+  transform: translateY(0);
+}
+
+.panel.open-active > *:first-child {
+  transform: translateY(-110%);
+}
+
+.panel > *:last-child {
+  transform: translateY(110%);
+}
+.panel.open-active > *:last-child {
+  transform: translateY(0);
+}
+
+.panel.panel7.schools.column-flex > :first-child {
+margin-bottom: -145%;
+}
+
+.panel.panel7.panel.open-active > :first-child {
+margin-bottom: 0%;
+}
+
+.panel.panel7.schools.column-flex > :nth-child(2) {
+  transform: translateY(210%);
+}
+
+.panel.panel7.panel.open-active > :nth-child(2){
+  transform: translateY(0);
+  display: flex;
+}
+
+.panel.panel7.schools.column-flex > :nth-child(3) {
+  transform:translateY(-110%);
+  display: none;
+}
+.panel.panel7.panel.open-active > :nth-child(3){
+  transform: translateX(0);
+  display: flex;
+}
 
 .panel p {
   text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
@@ -146,5 +193,7 @@ p.panel_text {
   flex: 0.7s
 }
 
-
+.schools:last-child {
+  font-size: 100px;
+}
 }

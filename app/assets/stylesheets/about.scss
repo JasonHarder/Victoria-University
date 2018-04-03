@@ -1,11 +1,11 @@
 div.tranbox {
     margin: 30px;
     background-color: none;
-    
+
     opacity: 0.6;
     filter: alpha(opacity=60); /* For IE8 and earlier */
   }
-  
+
   div.tranbox .botext {
     margin: 5%;
     font-weight: normal;
@@ -13,8 +13,6 @@ div.tranbox {
     font-family: 'opensans';
     height: 300px;
     font-size: 30px;
-    
-  
   }
 
   .headings{
@@ -28,8 +26,9 @@ div.tranbox {
     padding-top: 400px;
 }
 
-.img{
-    padding-top: 200px;
+img {
+    max-width: 400px;
+    margin-top: 3vh;
 }
 
 .teamimg{
@@ -37,9 +36,6 @@ div.tranbox {
     height: 516px;
     object-fit: fill
 }
-
-
-
 /*   Teacherds  */
 
 .image-overlap{

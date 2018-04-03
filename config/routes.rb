@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   resources :overview, only: [:index]
   resources :charges
   resources :naturalappliedsci, only: [:index]
-  resources :creativeappliedss, only: [:index]
+  resources :creativeapplied, only: [:index]
   resources :investors, only: [:index]
   resources :mgmttech, only: [:index]
   resources :home, only: [:index]
@@ -37,7 +37,6 @@ Rails.application.routes.draw do
   resources :schools, only: [:index,:creativeappliedss,:mgmttech,:naturalapplied]
   resources :contacts, only: [:index]
   resources :academics, only: [:index]
-
   resources :conversations, only: [:create] do
     member do
       post :close
