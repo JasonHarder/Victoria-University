@@ -9,8 +9,7 @@
 <% if current_user.try(:admin?) %>
 <h1> Notice: Photos should be 720px x 720px to keep the photos circular on upload.</h1>
 <%end%>
-<div class = "bodycontent">
-
+<div class = "bodycontent container">
   <div class="person">
     <div class="content-overlap">
       <%= (image_tag "yomi_circle.jpg" ,class: "img-circle sized image-overlap img-responsive") %>

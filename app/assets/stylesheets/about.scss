@@ -1,7 +1,6 @@
 div.tranbox {
     margin: 30px;
     background-color: none;
-
     opacity: 0.6;
     filter: alpha(opacity=60); /* For IE8 and earlier */
 }
@@ -31,8 +30,4 @@ div.tranbox .botext {
     height: 516px;
     object-fit: fill
 }
-/*   Teacherds  */
-
-.image-overlap{
-    z-index: 1;
-}
+/*   Teachers  */
