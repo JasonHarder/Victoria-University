@@ -10,19 +10,23 @@
     background-color: #737373;
 
   }
+
   ul {
     padding-left: 0px;
     list-style: none;
   }
 
-  .img-circle:nth-child(even) {
-    margin-left: -20%;
+  .banner {
+    margin-bottom: 8vh;
   }
 
-  .img-circle {
-    max-width: 400px;
+  .person {
+    display: flex;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
   }
-// These elements all are for the chat system built with action cable.
+
+  // These elements all are for the chat system built with action cable.
   .messages-list {
     max-height: 200px;
     overflow-y: auto;
@@ -117,12 +121,6 @@
     margin-top: 0
   }
 
-  .image-overlap-right {
-    width: 100%;
-    margin-left: -10%;
-  }
-
-
 // containers are bootstrap classes - to follow the bootstrap grid system everything must be in a container.
   .container {
     position: relative;
@@ -131,26 +129,64 @@
 
 // .content-overlap was created for overlapping text over pictures. there is a codepen available that
 // this was taken from and then I edited it for the content-overlap-body class.
+  .person:nth-of-type(even) {
+    justify-content: start;
+    margin-left: 20%;
+
+  }
+
+  .person:nth-of-type(odd) {
+    margin-left: 30%;
+    justify-content: end;
+  }
+
+  .person:nth-of-type(odd) img {
+    margin-left: -50%;
+  }
+
+  .person:nth-of-type(even) .image-overlap {
+    margin-left: 98%;
+  }
+  .content-overlap {
+    background: rgb(245, 244, 239);
+    position: relative;
+    padding: 80px;
+    padding-top: 100px;
+  }
+
+  .content-overlap > p {
+    padding: 1%;
+  }
+
   .content-overlap {
     background: rgb(245, 244, 239);
     width: 70%;
-    position: absolute;
-    padding: 40px;
-    margin-left: -20%;
-    margin-top: 10%;
-    bottom:35vh;
-  }
-
-  .content-overlap-right {
-    background: rgb(245, 244, 239);
-    width: 70%;
-    position: absolute;
-    bottom: 80px;
-    right : 10%;
+    position: relative;
     padding: 60px;
-    margin-right: -20%;
+    padding-top: 100px;
+    margin-right: 1%;
+    display: flex;
 
   }
+  .image-overlap {
+    position: absolute;
+    margin-left: -15%;
+    margin-top: -15vh;
+    max-height: 40vh;
+    object-fit: cover;
+
+  }
+
+
+
+
+  .image-overlap-right {
+    position: relative;
+    margin-top: -18%;
+    margin-left: 5%;
+  }
+
+
   .content-overlap:before {
     content: "";
     border: 2px solid rgba(171, 154, 124, 1.0);
@@ -170,75 +206,35 @@
     left: -10px;
     right: -10px;
     bottom: -10px;
-
-  }
-  .image-overlap {
-    width: 70%;
-    float: right;
-    margin-right: -30%;
   }
 
   @media screen and (max-width: 700px) {
-
     .content-overlap {
-      position: relative;
-      width: 90%;
-      margin-left: 5%;
-    }
-
-    .content-overlap:first-child {
-      margin-top: 30vh;
+      margin: 10%;
     }
 
     .image-overlap {
-      right: 10px;
-      margin: -100px;
-      margin-bottom: 5vh;
-  }
-
-  .image-overlap-right {
-
-  }
-
-
-img.img-circle {
-      justify-content: left;
-      display: flex;
-      float: left;
-      max-width: 90%;
-      max-width: 370px;
-      margin-left: -100px;
-}
-    .sized {
-      max-width: 400px;
+      margin-bottom: 10vh;
     }
-    .content-overlap-right {
-      position: relative;
-      width: 100%;
-    };
+
+    .content-overlap-right{
+      margin-left: 20%;
+    }
 
     .image-overlap-right {
-      width: 100%;
-      margin-left: 25%;
+      margin-bottom: 10vh;
     }
-  }
 
-  .content-overlap-body {
-    background: rgb(245, 244, 239);;
-    top: 80px;
-    padding: 60px;
-  }
-
-  .content-overlap-body-right {
-    background: rgb(245, 244, 239);
-    bottom: 80px;
-    right : 0px;
-    padding: 60px;
-  }
-
-  .bodytext {
-    color: black;
+    .person {
+      margin-top: 5vh;
+      margin-bottom: 5vh;
     }
+
+    .person:nth-of-type(even) .image-overlap {
+      margin-top: -50vh;
+    }
+}
+
 
 // Classes for the bootstrap footer go here.
     .footer-bs {
