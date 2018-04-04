@@ -22,14 +22,7 @@
 
 <%= render :partial => "layouts/admin_toolbar" %>
 
-<% unless current_page?('/') %>
-  <%= render :partial => "layouts/header" %>
- <% end %>
-
-<% if current_page?('/') %>
-  <%= render :partial => "layouts/home_header" %>
- <% end %>
-
+<%= render :partial => "layouts/header" %>
 
 <%= render :partial => 'layouts/donate' %>
 

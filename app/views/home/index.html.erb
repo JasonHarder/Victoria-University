@@ -1,45 +1,58 @@
-<div class ="panels">
-  <div class ="panel panel1 overview column-flex ">
-    <p class = 'panel_text'>Our Organization</p>
-      <%= link_to "Our mission & vision", overview_index_path, :class => 'panel_text' %>
-  </div>
-  <div class ="panel panel2 admission column-flex">
-    <p class = 'panel_text'>Admission</p>
-      <%= link_to "Our admission requirements",admissions_path, :class => 'panel_text' %>
-  </div>
-  <div class = "panel panel3 about column-flex">
-    <p class = 'panel_text'>About Us </p>
-      <%= link_to "Our implimentation team",teachers_path, :class => 'panel_text'  %>
-  </div>
+<div class="wrapper">
+    <div class="content">
+        <h1 class="font">VICTORIA UNIVERSITY </h1>
+        <h3 class="font">En Dios Confio</h3>
+        <h5 class="font">Path To Impact</h5>
+        <p class="hoverfont">
+        </p>
 
-  <div class = "panel panel4 academics column-flex">
-    <p class = "panel_text"> Academics </p>
-      <%= link_to "Academics at Victoria University", academics_path, :class => 'panel_text' %>
-  </div>
-
-  <div class = "panel panel5 campus column-flex">
-    <p class = 'panel_text'> Campus </p>
-      <%= link_to "Victoria University Campus", campus_path, :class => 'panel_text'%>
-  </div>
-
-  <div class = "panel panel6 events column-flex">
-    <p class = 'panel_text'> Events </p>
-      <%= link_to "Events at Victoria University",events_path, :class => 'panel_text'%>
-  </div>
-
-<%# maybe instead we can change it to having  %>
-<%# School of Creative Arts & Applied Social Sciences in the panel text where our schools is once clicked %>
-<%# maybe use content css %>
-  <div class = "panel panel7 schools column-flex">
-    <p class = 'panel_text'> Our Schools </p>
-      <%= link_to "School Of Management & Technology",mgmttech_index_path, :class => 'panel_text' %>
-      <%= link_to "School Of Natural & Applied Sciences", naturalappliedsci_index_path, :class => 'panel_text'%>
-      <%= link_to "School Of Creative Arts & Applied Social Sciences", creativeapplied_index_path, :class => 'panel_text'%>
-
-  </div>
-
-  <div class = "panel panel8 contact column-flex">
-    <p class = 'panel_text'> Contact us </p>
-      <%= link_to " Be part of greatness. Be part of a knowledge-driven economy. Be part of “developed” Nigeria.",contacts_path, :class => 'panel_text'%>
-  </div>
+    </div>
 </div>
+<div class = "emptyhome2"> </div>
+<div class="container">
+    <div class="content-overlap2">
+        <h2 align="center">Our Vision:</h2>
+        <p>To create a path to impact by offering competitive skills for national development and significant global participation.
+        </p>
+    </div>
+    <div class="image-overlap">
+            <%= (image_tag "faculty_arts.jpg",  class:"img-fluid")%>
+    </div>
+</div>
+
+<div class = "emptyhome2"> </div>
+
+<div class="container">
+    <div class="content-overlap-right">
+        <h2>Our Mission:</h2>
+            <li> To graduate employable, innovative, and entrepreneurial students.</li> <br>
+            <li> To close the unemployment gap by providing adequate and employable skills.</li> <br>
+            <li> To build a brighter, stronger, safer and more prosperous Nigeria.</li> <br>
+            <li> To stem the exodus of Nigerian students that are in pursuit of quality education abroad.</li> <br>
+            <li> To make Nigerian graduates an envy of the world.</li> <br>
+            <li> To attract more foreign students to Nigeria.</li> <br>
+    </div>
+    <div class="image-overlap-right">
+        <%= (image_tag "faculty_applied.jpg",class:"img-fluid")%>
+    </div>
+</div>
+
+<div class = "emptyhome2"> </div>
+
+
+<div class="container">
+    <div class="content-overlap">
+    <h2 align="center">World Leaders:</h2>
+
+<p>
+We truely believe Nigeria has the ability to graduate as many leaders as any other country and think its time to show the rest of the world what our students can do.
+</p>
+</div>
+<div class="image-overlap">
+    <%= (image_tag "faculty_social.jpg", class:"img-fluid")%>
+</div>
+
+</div>
+</body>
+
+</html>
