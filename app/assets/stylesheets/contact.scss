@@ -1,24 +1,25 @@
 .empty {
-    margin: 150px;
+    margin: 35vh;
 }
 
 .image-overlap-contact {
-    padding-top: 40px;
     max-width: 100%;
 }
 
 .content-overlap-contact {
-    bottom: 1vh;
-    margin: -200px;
     background: rgb(245, 244, 239);
-    width: 50%;
-    position: absolute;
+    position: flex;
     padding: 40px;
-    margin-left: 40%;
     margin-top: 10%;
     margin-right: 1%;
 }
 
 .image-overlap-contact > img {
     max-width: 700px;
+    margin-top: 10vh;
+    overflow: hidden;
+}
+
+.contact-us {
+    flex-direction: row;
 }

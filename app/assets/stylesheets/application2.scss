@@ -2,14 +2,16 @@
     box-sizing: border-box;
   }
 
-  html {
-    background-color: #737373;
-  }
+  @import "bootstrap-sprockets";
+  @import "bootstrap";
+  // html {
+  //   background-color: #737373;
+  // }
 
-  body {
-    background-color: #737373;
+  // body {
+  //   background-color: #737373;
 
-  }
+  // }
 
   ul {
     padding-left: 0px;
@@ -19,6 +21,56 @@
   .wrapper {
     margin-left: 1%;
     margin-right: 1%;
+  }
+
+
+  .content-overlap-body {
+    background: rgb(245, 244, 239);
+    padding: 80px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-overlap > p {
+    padding: 1%;
+  }
+
+  .content-overlap > h2 {
+    align-self: center;
+  }
+
+  .content-overlap {
+    background: rgb(245, 244, 239);
+    max-width: 100%;
+    position: relative;
+    padding: 10%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .home-content {
+    margin-left: -20%;
+    align-self: flex-start;
+  }
+
+  .image-overlap-right {
+    position: relative;
+    margin-top: -18%;
+    margin-left: 5%;
+  }
+
+
+  .content-overlap:before {
+    content: "";
+    border: 2px solid rgba(171, 154, 124, 1.0);
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
   }
 
 
@@ -80,13 +132,14 @@
     color: white;
     margin-left: 1%;
     margin-right: 1%;
+    z-index: 2;
+    display: block;
   }
 
   .sticky {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
  }
 // Change the navbar fonts
 
@@ -134,18 +187,10 @@
     overflow: hidden;
   }
 
-  .home-content {
-    z-index: 1;
-    margin-left: -10%;
-  }
-
-  .image-home {
-    max-height: 45vh;
-  }
-
   .homebox {
     display: flex;
     overflow: hidden;
+    flex-direction: row;
   }
 
   .sized {
@@ -156,55 +201,6 @@
     order: 1
     }
 
-  .person:nth-child(odd) > img {
-
-  }
-
-  .content-overlap-body {
-    background: rgb(245, 244, 239);
-    padding: 80px;
-    padding-top: 100px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .content-overlap > p {
-    padding: 1%;
-  }
-
-  .content-overlap > h2 {
-    align-self: center;
-  }
-
-  .content-overlap {
-    background: rgb(245, 244, 239);
-    max-width: 100%;
-    position: relative;
-    padding: 10%;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-
-  }
-
-
-
-  .image-overlap-right {
-    position: relative;
-    margin-top: -18%;
-    margin-left: 5%;
-  }
-
-
-  .content-overlap:before {
-    content: "";
-    border: 2px solid rgba(171, 154, 124, 1.0);
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-  }
 
   .footer-bs {
     background-color: #737373;
@@ -214,6 +210,8 @@
   border-bottom-right-radius: 6px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 6px;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 .footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
 .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
@@ -342,6 +340,8 @@
 
   .container-fluid {
     background-color: #6D6E72;
+    margin-left: 1%;
+    margin-right: 1%;
   }
 
 
