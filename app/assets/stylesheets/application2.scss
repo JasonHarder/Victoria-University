@@ -134,6 +134,20 @@
     overflow: hidden;
   }
 
+  .home-content {
+    z-index: 1;
+    margin-left: -10%;
+  }
+
+  .image-home {
+    max-height: 45vh;
+  }
+
+  .homebox {
+    display: flex;
+    overflow: hidden;
+  }
+
   .sized {
     max-height: 50vh;
   }
@@ -261,6 +275,45 @@
 // This is code for larger screens
 @media screen and (min-width: 1024px) {
 
+  .person {
+    overflow: inherit;
+  }
+
+  .person:nth-child(odd) {
+
+  }
+
+  .person:nth-child(odd) > .content-overlap {
+    margin-left: -35%;
+    padding-left: 35%;
+
+  }
+
+  .person:nth-child(odd) > .innercontent {
+
+  }
+
+
+  .person:nth-child(even) {
+    order: 1
+    }
+
+  .person:nth-child(even) > .content-overlap {
+    margin-right: -35%;
+    padding-right: 35%;
+  }
+
+  .person:nth-child(even) > .innercontent {
+    background-color: rebeccapurple;
+  }
+
+
+  .sized {
+    z-index: 1;
+    align-self:center;
+  }
+
+
 }
 // code for smaller screens
 @media screen and (max-width: 1024px) {
@@ -270,9 +323,10 @@
   overflow: hidden;
   }
 
+
   .sized {
     max-height: 30vh;
-    max-width: 50%;
+    max-width: 40%;
     margin-bottom: 10vh;
     margin-left: 25%;
   }
