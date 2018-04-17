@@ -38,11 +38,11 @@ document.getElementById('donateButton').addEventListener('click', function(e) {
     name: 'Victoria University',
     description: 'Donation',
     currency: 'cad',
-    amount: 2000
+    amount: `${amount}`
   });
   e.preventDefault();
 });
-
+// above we change the amount to a custom imput
 // Close Checkout on page navigation:
 window.addEventListener('popstate', function() {
   handler.close();

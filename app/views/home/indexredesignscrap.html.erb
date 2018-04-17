@@ -1,0 +1,45 @@
+<div class ="panels">
+  <div class ="panel panel1 overview column-flex ">
+    <p class = 'panel_text'>Our Organization</p>
+      <%= link_to "Our mission & vision", overview_index_path, :class => 'panel_text' %>
+  </div>
+  <div class ="panel panel2 admission column-flex">
+    <p class = 'panel_text'>Admission</p>
+      <%= link_to "Our admission requirements",admissions_path, :class => 'panel_text' %>
+  </div>
+  <div class = "panel panel3 about column-flex">
+    <p class = 'panel_text'>About Us </p>
+      <%= link_to "Our implimentation team",teachers_path, :class => 'panel_text'  %>
+  </div>
+
+  <div class = "panel panel4 academics column-flex">
+    <p class = "panel_text"> Academics </p>
+      <%= link_to "Academics at Victoria University", academics_path, :class => 'panel_text' %>
+  </div>
+
+  <div class = "panel panel5 campus column-flex">
+    <p class = 'panel_text'> Campus </p>
+      <%= link_to "Victoria University Campus", campus_path, :class => 'panel_text'%>
+  </div>
+
+  <div class = "panel panel6 events column-flex">
+    <p class = 'panel_text'> Events </p>
+      <%= link_to "Events at Victoria University",events_path, :class => 'panel_text'%>
+  </div>
+
+<%# maybe instead we can change it to having  %>
+<%# School of Creative Arts & Applied Social Sciences in the panel text where our schools is once clicked %>
+<%# maybe use content css %>
+  <div class = "panel panel7 schools column-flex">
+    <p class = 'panel_text'> Our Schools </p>
+      <%= link_to "School Of Management & Technology",mgmttech_index_path, :class => 'panel_text' %>
+      <%= link_to "School Of Natural & Applied Sciences", naturalappliedsci_index_path, :class => 'panel_text'%>
+      <%= link_to "School Of Creative Arts & Applied Social Sciences", creativeapplied_index_path, :class => 'panel_text'%>
+
+  </div>
+
+  <div class = "panel panel8 contact column-flex">
+    <p class = 'panel_text'> Contact us </p>
+      <%= link_to " Be part of greatness. Be part of a knowledge-driven economy. Be part of “developed” Nigeria.",contacts_path, :class => 'panel_text'%>
+  </div>
+</div>
