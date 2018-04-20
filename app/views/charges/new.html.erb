@@ -1,3 +1,5 @@
+
+<%# STRIPE CHECKOUT STEP 1) HERE -> The customer arrives at your payment page that includes the Checkout code, loaded over HTTPS. %>
 <%= form_tag charges_path do %>
   <div id="error_explanation">
     <% if flash[:error].present? %>
@@ -8,7 +10,7 @@
     <%= label_tag(:amount, 'Donation Amount:') %>
     <%= text_field_tag(:amount) %>
   </article>
-
+<%# The customer clicks the payment button (e.g., Pay with Card), completes the payment form, and clicks Pay $9.99 within the Checkout window (or whatever your Checkout pay button is). %>
   <script src="https://checkout.stripe.com/checkout.js"></script>
 
 <button id="donateButton">Purchase</button>
@@ -47,9 +49,40 @@ document.getElementById('donateButton').addEventListener('click', function(e) {
 window.addEventListener('popstate', function() {
   handler.close();
 });
+
+$('#donateButton').on('click', function(e) {
+  e.preventDefault();
+
+  $('#error_explanation').html('');
+
+  var amount = $('input#amount').val();
+  amount = amount.replace(/\$/g, '').replace(/\,/g, '')
+
+  amount = parseFloat(amount);
+
+  if (isNaN(amount)) {
+    $('#error_explanation').html('<p>Please enter a valid amount in USD ($).</p>');
+  }
+  else if (amount < 5.00) {
+    $('#error_explanation').html('<p>Donation amount must be at least $5.</p>');
+  }
+  else {
+    amount = amount * 100; // Needs to be an integer!
+    handler.open({
+      amount: Math.round(amount)
+    })
+  }
+  $(window).on('popstate', function() {
+  handler.close();
+});
+});
+
 </script>
+
+
 <% end %>
 
 <!-- see if there is a test card that would submit the payment if the card says
 yes and goes to the controller and make the event dynamic - that handler.open amount needs to be
 customized (so we can show the new data in the popup which has to be read from the enviroment -->
+
