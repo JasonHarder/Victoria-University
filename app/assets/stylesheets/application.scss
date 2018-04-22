@@ -3,10 +3,13 @@
  *= require_self
  */
 // Required for bootstrap to work - do not touch unless you are removing bootstrap and ready to recode the website!.
- @import "bootstrap-sprockets";
- @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-
+html {
+  display: flex;
+  flex-direction: column;
+}
  /*
 
 /* ALL ANIMATIONS . WILL SHIFT TO A NEW FILE*/
@@ -25,6 +28,8 @@
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
+
+
 
 @-webkit-keyframes bounce {
   from,

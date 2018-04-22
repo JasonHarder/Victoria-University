@@ -69,7 +69,7 @@ config.secret_key = '901ab8eb08abf88340fdaa3e8b95b8191d8c86f8a08077005f1aae1064e
   # config.http_authenticatable = false
 
   # If 401 status code should be returned for AJAX requests. True by default.
-  # config.http_authenticatable_on_xhr = true
+  config.http_authenticatable_on_xhr = false
 
   # The realm used in Http Basic Authentication. 'Application' by default.
   # config.http_authentication_realm = 'Application'
@@ -244,7 +244,7 @@ config.secret_key = '901ab8eb08abf88340fdaa3e8b95b8191d8c86f8a08077005f1aae1064e
   # should add them to the navigational formats lists.
   #
   # The "*/*" below is required to match Internet Explorer requests.
-  # config.navigational_formats = ['*/*', :html]
+  config.navigational_formats = ['*/*', :html, :json]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete

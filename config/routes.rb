@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'sessions/create'
+
+  get 'sessions/sign_in_and_redirect'
+
+  get 'sessions/failure'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get 'overview/index'
@@ -14,8 +20,10 @@ Rails.application.routes.draw do
 
   get '/' => 'home#index'
 
-  devise_for :users, controllers: {registrations: "registrations"}
-
+  devise_for :users, controllers: {sessions: 'sessions'}
+  # Bring back to {registrations: 'registrations'}
+  # https://stackoverflow.com/questions/32237818/devise-sign-in-sign-up-in-popup
+  # Check above link for changes to user (changed it from a seperate page to a modal with help from that post.)
   resources :events, shallow: true do
     resources :event_pictures
   end
