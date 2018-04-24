@@ -1,6 +1,6 @@
-<% if user_signed_in? %>
+<% if current_user.try(:admin?)%>
   <div class = "admincreate">
-    <% if user_signed_in? %>
+    <% if current_user.try(:admin?) %>
       <p> <button type="button" class="btn btn-primary"><%= link_to 'New event' , new_event_path(@events)%> </button> </p>
   </div>
 <% end %>

@@ -2,7 +2,7 @@
     <h2 class = "contact" align = 'center'>Sign Up with Victoria U </h2>
   <div class = 'signupform'>
     <div class = 'formbox'>
-      <%= form_for(resource, as: resource_name, html: {class:'form-group'}, url: registration_path(resource_name)) do |f| %>
+     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name) ,:html => {:class => "login-box"},:format => :json, :remote => true ) do |f| %>
         <%= devise_error_messages! %>
             <div>
               <%= f.label :first_name %><br />
@@ -45,7 +45,7 @@
 
             <div>
                 <%= f.label :Address %> <br />
-                <%= f.text_field :Address, autocomplete: 'Please Provide Your Home Address Here' %>
+                <%= f.text_field :address, autocomplete: 'Please Provide Your Home Address Here' %>
             </div>
 
 

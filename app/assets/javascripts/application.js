@@ -39,14 +39,11 @@
   }
 });
 
-const panels =document.querySelectorAll('.panel')
-	function toggleOpen(){
-		this.classList.toggle('open');
-	}
-	function toggleActive(e) {
-		 if (e.propertyName.includes('flex')) {
-			this.classList.toggle('open-active');
-			}
-	}
-	panels.forEach(panel => panel.addEventListener('click',toggleOpen));//loopovereachpanel listen for a click and run toggleOpen on each when clicked.
-	panels.forEach(panel => panel.addEventListener('transitionend',toggleActive));//loopovereachpanel listen for a click and run toggleOpen on each when clicked.
+$("form.login-box").bind "ajax:success", (e, data, status, xhr) ->
+    if data.success
+      //javascript that executes if everything goes o.k.
+      $('#sign_in').modal('hide')
+      $('#sign_in_button').hide()
+      $('#submit_comment').slideToggle(1000, "easeOutBack" )
+    else
+      alert('failure!')

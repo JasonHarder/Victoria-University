@@ -1,13 +1,15 @@
 class RegistrationsController < Devise::RegistrationsController
-    before_action :limit_users, only: [:new, :create]
+    # before_action :limit_users, only: [:new, :create]
 
-    protected
+    # protected
 
-    def limit_users
-        if ((User.count == 5) & (user_signed_in?))
-            redirect_to root_path
-        elsif (User.count ==5)
-            redirect_to new_user_session_path
-        end
-    end 
+    # def limit_users
+    #     if ((User.count == 5) & (user_signed_in?))
+    #         redirect_to root_path
+    #     elsif (User.count ==5)
+    #         redirect_to new_user_session_path
+    #     end
+    # end
 end
+
+# only needed if we were going to limit the users - but now with user and admin roles we will not.

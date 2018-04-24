@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   get '/' => 'home#index'
 
-  devise_for :users, controllers: {sessions: 'sessions'}
+  devise_for :users, controllers: {registrations: 'registrations'}
   # Bring back to {registrations: 'registrations'}
   # https://stackoverflow.com/questions/32237818/devise-sign-in-sign-up-in-popup
   # Check above link for changes to user (changed it from a seperate page to a modal with help from that post.)
