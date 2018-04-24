@@ -67,4 +67,4 @@ gem "rename"
 # allows for admin panel.
 gem 'activeadmin'
 
-gem 'heroku'
+# gem 'heroku'
