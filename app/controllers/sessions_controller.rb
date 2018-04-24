@@ -13,6 +13,6 @@ class SessionsController < ApplicationController
   end
 
   def failure
-    return render :json {:success => false , :errors => ["Login Failed."]}
+    return render :json {:success => false, :errors => ["Login Failed."]}
   end
 end
