@@ -1,4 +1,6 @@
 branch-defaults:
+  activeadmin-model:
+    environment: Victoria-University
   activeadminbugs:
     environment: Victoria-University
     group_suffix: null

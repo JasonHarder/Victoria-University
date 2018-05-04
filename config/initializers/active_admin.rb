@@ -5,6 +5,9 @@ ActiveAdmin.setup do |config|
   # for each of the active admin pages.
   #
   config.site_title = "Victoria University"
+  config.load_paths = [File.join(Rails.root, "admin", "dashboard")]
+
+  # Take a look at what the loadpaths are for
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
