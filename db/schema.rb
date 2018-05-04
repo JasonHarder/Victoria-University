@@ -113,9 +113,8 @@ ActiveRecord::Schema.define(version: 20180422193437) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "admin", default: false
     t.text "reason"
-    t.integer "Age"
+    t.integer "age"
     t.string "phone_number"
     t.string "occupation"
     t.string "first_name"

@@ -2,7 +2,8 @@
     <h2 class = "contact" align = 'center'>Sign Up with Victoria U </h2>
   <div class = 'signupform'>
     <div class = 'formbox'>
-     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name) ,:html => {:class => "login-box"},:format => :json, :remote => true ) do |f| %>
+  <%= form_for(resource, as: resource_name, url: sessions_path(resource_name), html: { method: :post }) do |f| %>
+
         <%= devise_error_messages! %>
             <div>
               <%= f.label :first_name %><br />
