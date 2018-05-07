@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://redistogo:f9240a165777163e1e1c8c1c7cf97d7c@albacore.redistogo.com:10049/
-
+  #HEROKU url: redis://redistogo:f9240a165777163e1e1c8c1c7cf97d7c@albacore.redistogo.com:10049/
+  #AWS

@@ -1,22 +1,18 @@
 branch-defaults:
   master:
-    environment: Victoria-University-env
+    environment: Victoria-University-Production
     group_suffix: null
-environment-defaults:
-  Victoria-University-dev:
-    branch: null
-    repository: null
 global:
   application_name: Victoria-University
   branch: null
   default_ec2_keyname: aws-eb
   default_platform: Ruby 2.5 (Puma)
-  default_region: us-west-2
+  default_region: us-east-1
   include_git_submodules: true
   instance_profile: null
   platform_name: null
   platform_version: null
   profile: eb-cli
-  repository: https://github.com/Anthematics/Victoria-University
+  repository: null
   sc: git
   workspace_type: Application
