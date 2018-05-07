@@ -28,6 +28,19 @@
 
   }
 
+  .panelwrap {
+    display: flex;
+    min-width: 10%;
+    max-width: 10%;
+    min-height: 100vh;
+  }
+
+  .panelwrap_active {
+    max-width: 0%;
+    min-width: 0%;
+    min-height: 100vh;
+  }
+
   .wrapper {
     margin-left: 1%;
     margin-right: 1%;
