@@ -48,7 +48,6 @@ class EventsController < ApplicationController
     def event_params
       params.require(:event).permit(:title, :url, :body, event_picture_attributes:
         [:id, :url, :name])
-      permit_params :title , :url , :body, event_picture_attributes: [:id, :url, :name]
     end
 end
 
