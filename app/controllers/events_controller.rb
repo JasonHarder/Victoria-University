@@ -51,7 +51,7 @@ class EventsController < ApplicationController
     end
 end
 
-permit_params :attr1, :attr2 ## Add this line
+# permit_params :attr1, :attr2 ## Add this line
 
 # ActiveAdmin.register Post do
 #   permit_params :title, :content, :publisher_id, role_ids: []
