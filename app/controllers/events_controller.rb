@@ -50,3 +50,18 @@ class EventsController < ApplicationController
         [:id, :url, :name])
     end
 end
+
+# permit_params :attr1, :attr2 ## Add this line
+
+# ActiveAdmin.register Post do
+#   permit_params :title, :content, :publisher_id, role_ids: []
+# end
+# Nested associations in the same form also require an array, but it needs to be filled with any attributes used.
+
+# ActiveAdmin.register Post do
+#   permit_params :title, :content, :publisher_id,
+#     tags_attributes: [:id, :name, :description, :_destroy]
+# end
+
+# SEE ACTIVE ADMIN DOCS ON STRONG PARAMS WHICH IS THE ROOT OF THE ISSUE.
+# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

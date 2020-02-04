@@ -1,0 +1,17 @@
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+.ebextensions
+.git
+.gitignore
+
+# Rails Files
+.bundle
+.env
+log/*
+tmp/*
+public/assets/*
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Good old .DS_Store
+.DS_Store
