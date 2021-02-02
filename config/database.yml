@@ -1,23 +1,21 @@
+---
 development:
   adapter: postgresql
   database: victoria_development
   pool: 5
   timeout: 5000
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
+production:
+  adapter: postgresql
+  database: "<%= ENV['RDS_DB_NAME'] %>"
+  encoding: utf8
+  host: "<%= ENV['RDS_HOSTNAME'] %>"
+  password: "<%= ENV['RDS_PASSWORD'] %>"
+  port: "<%= ENV['RDS_PORT'] %>"
+  username: "<%= ENV['RDS_USERNAME'] %>"
+
 test:
   adapter: postgresql
   database: victoria_test
   pool: 5
   timeout: 5000
-
-production:
-  adapter: postgresql
-  encoding: utf8
-  database: <%= ENV['RDS_DB_NAME'] %>
-  username: <%= ENV['RDS_USERNAME'] %>
-  password: <%= ENV['RDS_PASSWORD'] %>
-  host: <%= ENV['RDS_HOSTNAME'] %>
-  port: <%= ENV['RDS_PORT'] %>

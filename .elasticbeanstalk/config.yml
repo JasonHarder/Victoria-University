@@ -1,9 +1,12 @@
 branch-defaults:
-  master:
-    environment: Victoria-University-Production
+  activeadmin-model:
+    environment: Victoria-University
+  activeadminbugs:
+    environment: Victoria-University
     group_suffix: null
 global:
-  application_name: Victoria-University
+  application_name: Victoria University
+
   branch: null
   default_ec2_keyname: aws-eb
   default_platform: Ruby 2.5 (Puma)

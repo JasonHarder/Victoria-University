@@ -107,7 +107,7 @@ ActiveRecord::Schema.define(version: 20180706025310) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "reason"
-    t.integer "Age"
+    t.integer "age"
     t.string "phone_number"
     t.string "occupation"
     t.string "first_name"
